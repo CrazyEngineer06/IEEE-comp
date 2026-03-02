@@ -54,7 +54,7 @@ export function Hero() {
             </h1>
 
             <div className="hero-badge">
-              Nexus of Digitalization, Intelligence and Applications
+               Quantum Informatics, Communication Systems and Applications 
             </div>
           </motion.div>
 

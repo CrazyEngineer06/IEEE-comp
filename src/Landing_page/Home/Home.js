@@ -81,10 +81,7 @@ export default function Home() {
           >
             <h2>About the Conference</h2>
             <p>
-              The IEEE International Conference on Nexus of Digitalization,
-              Intelligence and Applications brings together researchers,
-              practitioners, and industry experts to explore the latest
-              advancements in artificial intelligence and digital transformation.
+              The International Conference on Quantum Informatics, Communication Systems and Applications is a global platform focused on advancements in quantum information science and modern communication technologies. It brings together researchers, academicians, industry experts, and students to share innovative research and emerging trends.
             </p>
 
             <p>

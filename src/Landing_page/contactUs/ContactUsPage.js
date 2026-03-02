@@ -32,8 +32,8 @@ function VenueContact() {
             <div className="contact-item">
               <FaUser className="icon" />
               <p>
-                Name,phone <br />
-                Name,phone
+                Dr. Sita Yadav,+91 9158362868 <br />
+                Dr. Nikita Singhal,+91 8308320140
               </p>
             </div>
 

@@ -58,23 +58,15 @@ export default function Registration() {
       </section>
 
       {/* Notice */}
-      <section className="registration-notice">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          🎉 Early Bird Registration: Save 8% if you register before 10th July 2027
-        </motion.p>
-      </section>
+      
 
       {/* Fees TABLE */}
       <section className="registration-fees">
-        <div className="section-header">
-          <h2>Registration Fees</h2>
+        {/* <div className="section-header">
+          
           <div className="divider" />
           <p>Choose the category that applies to you</p>
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

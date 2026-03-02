@@ -9,6 +9,7 @@
 
 .Paper-section{
   background-color:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  width : 100%
 }
 
 .mb{
@@ -191,9 +192,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin: 40px auto;
+  
   padding: 0 20px;
-  max-width: 1400px;
+  width : 100%;
   overflow: hidden; /* Hide cards during slide-in animation */
 }
 
