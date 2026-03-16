@@ -31,35 +31,35 @@ const committeeStructure = [
   {
     section: "Conference Chair",
     members: [
-      { name: "Dr. Sita Yadav", affiliation: "	Assistant Professor ,AIT Pune", email: "syadav@aitpune.edu.in" },
       { name: "Dr. Nikita Singhal", affiliation: "	Assistant Professor ,AIT Pune", email: "ngupta@aitpune.edu.in" },
+      { name: "Dr. Sita Yadav", affiliation: "	Assistant Professor ,AIT Pune", email: "syadav@aitpune.edu.in" },
     ],
   },
-  {
-    section: "Conference Co-Chair",
-    members: [
-      { name: "ABC", affiliation: "AIT, Pune", email: "ABCa@ait.ac.in" },
-    ],
-  },
-  {
-    section: "Technical Program Chair",
-    members: [
-      { name: "Dr. Sagar Rane", affiliation: "Associate Professor ,AIT Pune", email: "sagarrane@aitpune.edu.in" },
-      { name: "Ms Y T Hambir", affiliation: "Assistant Professor ,AIT Pune", email: "ythambir@aitpune.edu.in" },
-    ],
-  },
-  {
-    section: "Publicity Chair",
-    members: [
-      { name: "ABC", affiliation: "AIT, Pune", email: "ABC@ait.ac.in" },
-    ],
-  },
-  {
-    section: "Finance Chair",
-    members: [
-      { name: "ABC", affiliation: "AIT, Pune", email: "ABC@ait.ac.in" },
-    ],
-  },
+  // {
+  //   section: "Conference Co-Chair",
+  //   members: [
+  //     { name: "ABC", affiliation: "AIT, Pune", email: "ABCa@ait.ac.in" },
+  //   ],
+  // },
+  // {
+  //   section: "Technical Program Chair",
+  //   members: [
+  //     { name: "Dr. Sagar Rane", affiliation: "Associate Professor ,AIT Pune", email: "sagarrane@aitpune.edu.in" },
+  //     { name: "Ms Y T Hambir", affiliation: "Assistant Professor ,AIT Pune", email: "ythambir@aitpune.edu.in" },
+  //   ],
+  // },
+  // {
+  //   section: "Publicity Chair",
+  //   members: [
+  //     { name: "ABC", affiliation: "AIT, Pune", email: "ABC@ait.ac.in" },
+  //   ],
+  // },
+  // {
+  //   section: "Finance Chair",
+  //   members: [
+  //     { name: "ABC", affiliation: "AIT, Pune", email: "ABC@ait.ac.in" },
+  //   ],
+  // },
 ];
 
 export default function Committee() {

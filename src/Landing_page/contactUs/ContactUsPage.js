@@ -32,16 +32,18 @@ function VenueContact() {
             <div className="contact-item">
               <FaUser className="icon" />
               <p>
-                Dr. Sita Yadav,+91 9158362868 <br />
-                Dr. Nikita Singhal,+91 8308320140
+                 
+                Dr. Nikita Singhal,+91 8308320140 <br />
+                Dr. Sita Yadav,+91 9158362868
               </p>
             </div>
 
             <div className="contact-item">
               <FaEnvelope className="icon" />
               <p>
-                xyz[at]aitpune[dot]edu[dot]in <br />
-                abc[at]aitpune[dot]edu[dot]in
+                 
+                ngupta@aitpune.edu.in<br />
+                syadav@aitpune.edu.in
               </p>
             </div>
           </div>
