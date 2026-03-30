@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 
 function Brochure() {
   useEffect(() => {
-    window.location.replace('/brochure _20260304_142945_0000.pdf');
+    window.location.replace('/Copy of brochure _20260330_100932_0000.pdf');
   }, []);
 
   return (

@@ -11,10 +11,7 @@ function Footer() {
         <div className="footer-col">
           <h2>IEEE 2027</h2>
           <p>
-            The International Conference on Nexus of Digitalization,
-            Intelligence, and Applications serves as a premier platform
-            for researchers and practitioners to share innovations and
-            advancements in the field.
+             The platform serves as a premier platform for collaboration and innovation at the intersection of quantum science and modern communication engineering.
           </p>
         </div>
 
@@ -33,8 +30,8 @@ function Footer() {
         <div className="footer-col">
           <h3>Contact Us</h3>
           <p>Army Institute of Technology, Pune, India</p>
-          <p>email@aitpune.edu.in</p>
-          <p>Phone: 35</p>
+          <p>hodcomp@aitpune.edu.in</p>
+          <p>Phone: 7249250186 [EXT:2140]</p>
         </div>
 
       </div>
