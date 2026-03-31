@@ -46,10 +46,10 @@ function CallForPapers() {
   ];
 
   const dates = [
-    { label: "Abstract Submission Date: ", date: "10 Feb 2027" },
-    { label: "Full Paper Submission Date:", date: "20 Feb 2027" },
-    { label: "Notification of Acceptance Date", date: "10 May 2027" },
-    { label: "Final Paper Submission Date", date: "30 June 2027" },
+    { label: "Abstract Submission Date: ", date: "2027-02-10" },
+    { label: "Full Paper Submission Date:", date: "2027-02-10" },
+    { label: "Notification of Acceptance Date", date: "2027-04-30" },
+    { label: "Final Paper Submission Date", date: "2027-05-30" },
     // { label: "Conference Dates", date: "18th-19th Sept, 2026" },
   ];
   const topics = tracks.flatMap((track) => track.items);

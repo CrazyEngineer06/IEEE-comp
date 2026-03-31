@@ -147,7 +147,7 @@ export default function Registration() {
             <button className="primary-btn">Register Online</button>
             <button className="secondary-btn">Download Form</button>
           </div>
-          <small>Questions? Contact us at registration@aitpuneieee2027.in</small>
+          <small>Questions? Contact us at hodcomp@aitpune.edu.in</small>
         </motion.div>
       </section>
 

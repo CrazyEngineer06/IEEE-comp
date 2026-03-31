@@ -17,7 +17,7 @@ import CallForPapers from './Landing_page/callForPapers/CallForPapers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/iqicsa2027">
     <Navbar />
     <ScrollToTop />
     <Routes>
@@ -28,8 +28,7 @@ root.render(
       <Route path='/callForPapers' element={<CallForPapers />}></Route>
       <Route path='/committee' element={<CommitteePage />}></Route>
       <Route path='/registration' element={<RegistrationPage />}></Route>
-      <Route path='/contactUs' element={<ContactUsPage />}></Route>
-      
+      <Route path='/contactUs' element={<ContactUsPage />}></Route> 
     </Routes>
     
     <Footer />

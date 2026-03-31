@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { FaTwitter, FaFacebookF, FaGlobe, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -19,10 +20,10 @@ function Footer() {
         <div className="footer-col">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/callForPapers">Call for Papers</a></li>
-            <li><a href="/registration">Registration</a></li>
-            <li><a href="/committee">Committee</a></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to ="/callForPapers">Call for Papers</Link></li>
+            <li><Link to ="/registration">Registration</Link></li>
+            <li><Link to ="/committee">Committee</Link></li>
           </ul>
         </div>
 

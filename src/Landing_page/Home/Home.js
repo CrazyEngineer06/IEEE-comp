@@ -2,6 +2,7 @@ import "./Home.css";
 import { Hero } from "../../Components/Hero";
 import { motion } from "framer-motion";
 import { Calendar, Users, Award, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -43,11 +44,11 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="section-header"
-          >
+          > 
             <h2 style={{paddingRight:"30px"}}>Why Attend?</h2>
             <div className="underline" />
           </motion.div>
-
+  
           <div className="features-grid">
             {features.map((feature, index) => {
               const Icon = feature.icon;
@@ -90,9 +91,9 @@ export default function Home() {
               the global research community.
             </p>
 
-            <a href="/about" className="btn-primary">
+            <Link to="/about" className="btn-primary">
               Learn More
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -124,12 +125,12 @@ export default function Home() {
           </p>
 
           <div className="cta-buttons">
-            <a href="/papers" className="btn-light">
+            <Link to="/callForPapers" className="btn-light">
               Submit Paper
-            </a>
-            <a href="/registration" className="btn-dark">
+            </Link>
+            <Link to="/registration" className="btn-dark">
               Register Now
-            </a>
+            </Link>
           </div>
         </motion.div>
       </section>

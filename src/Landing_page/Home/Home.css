@@ -50,12 +50,12 @@
 .feature-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg,#3b82f6,#2563eb);
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
   border-radius: 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -130,9 +130,8 @@
 }
 
 /* ================= CTA ================= */
-
 .cta-section {
-  background: linear-gradient(90deg,#3b82f6,#2563eb);
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
   padding: 80px 20px;
   text-align: center;
 }
@@ -174,26 +173,89 @@
 .btn-light:hover,
 .btn-dark:hover {
   transform: scale(1.05);
-} 
+}
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
+  /* Tablet view: 2 columns for features */
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Stack about section vertically */
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  .features-grid {
-    grid-template-columns: 1fr;
+  /* 1. Make container wider to use more screen real estate */
+  .container {
+    width: 95%; /* Spread closer to the edges */
+    padding: 0 10px;
   }
 
-  .section-header h2 {
-    font-size: 30px;
+  /* 2. Features: One card per row, full width */
+  .features-grid {
+    grid-template-columns: 1fr; 
+    gap: 16px;
   }
-} 
+
+  .feature-card {
+    width: 100%; /* Ensure card fills the grid track */
+    box-sizing: border-box;
+  }
+
+  /* 3. About Section: Ensure text and image fill the screen width */
+  .about-grid {
+    grid-template-columns: 1fr; /* Force single column */
+    display: block; /* Fallback for older browsers to ensure stacking */
+  }
+
+  .about-grid > div {
+    width: 100%;
+    margin-bottom: 30px; /* Space between text and image */
+  }
+
+  .about-section h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    text-align: justify; /* Optional: makes text look "spread" and clean */
+  }
+
+  .about-image-wrapper {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Hide the decorative border on mobile to prevent overflow */
+  .image-border {
+    display: none;
+  }
+
+  /* 4. Buttons: Full width for better mobile UX */
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-light, .btn-dark, .btn-primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

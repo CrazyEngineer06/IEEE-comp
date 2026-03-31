@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
+import {Link} from "react-router-dom";
 
 const TYPING_SPEED = 100;
 const INSTITUTION_TEXT = "ARMY INSTITUTE OF TECHNOLOGY";
@@ -75,12 +76,12 @@ export function Hero() {
             transition={{ delay: 0.9 }}
             className="hero-buttons"
           >
-            <a href="/registration" className="btn primary">
+            <Link to="/registration" className="btn primary">
               Register Now
-            </a>
-            <a href="/papers" className="btn secondary">
+            </Link>
+            <Link to="/callForPapers" className="btn secondary">
               Submit Paper
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>

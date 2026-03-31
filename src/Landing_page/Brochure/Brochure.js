@@ -8,28 +8,47 @@
 
 // export default Brochure;
 
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
+
+// function Brochure() {
+//   useEffect(() => {
+//     window.open('/brochure2027.pdf','_blank');
+//   }, []);
+
+//   return (
+//     <div style={{
+//       position: 'fixed',
+//       top: 0,
+//       left: 0,
+//       width: '100vw',
+//       height: '100vh',
+//       backgroundColor: '#fff',
+//       display: 'flex',
+//       alignItems: 'center',
+//       justifyContent: 'center',
+//       zIndex: 9999,
+//     }}>
+//       <p>Loading PDF...</p>
+//     </div>
+//   );
+// }
+
+// export default Brochure;
+
+import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Brochure() {
+  const linkRef = useRef(null);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    window.location.replace('/Copy of brochure _20260330_100932_0000.pdf');
+    linkRef.current.click();
+    navigate('/');
   }, []);
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: '#fff',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 9999,
-    }}>
-      <p>Loading PDF...</p>
-    </div>
+    <a ref={linkRef} href="/iqicsa2027/brochure2027.pdf" target="_blank" rel="noreferrer" />
   );
 }
 
