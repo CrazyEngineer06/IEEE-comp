@@ -6,34 +6,180 @@
   width: 100%;
   overflow-x: hidden;
   background: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.home-page *,
+.home-page *::before,
+.home-page *::after {
+  box-sizing: border-box;
 }
 
 .container {
   width: 92%;
-  max-width: 1250px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
 
 /* =========================================================
-   COMMON
+   HERO SECTION
+========================================================= */
+
+.hero-section,
+.hero,
+.home-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section img,
+.hero img,
+.home-hero img {
+  display: block;
+  width: 100%;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   DESKTOP - REDUCED TO APPROX. 40%
+========================================================= */
+
+.hero-buttons {
+  position: absolute !important;
+
+  left: 50% !important;
+  bottom: 45px !important;
+
+  transform: translateX(-50%) !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 12px !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+
+  z-index: 20 !important;
+}
+
+
+/* =========================================================
+   HERO BUTTON SIZE
+========================================================= */
+
+.hero-buttons a,
+.hero-buttons button {
+  min-width: 108px !important;
+
+  padding: 7px 14px !important;
+
+  font-size: 12px !important;
+
+  line-height: 1.2 !important;
+
+  border-radius: 7px !important;
+
+  font-weight: 800 !important;
+
+  box-sizing: border-box !important;
+
+  white-space: nowrap !important;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.hero-buttons .btn-primary {
+  color: #ffffff !important;
+
+  background: #3b82f6 !important;
+
+  border: none !important;
+}
+
+.hero-buttons .btn-primary:hover {
+  color: #ffffff !important;
+
+  background: #2563eb !important;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SUBMIT PAPER BUTTON
+========================================================= */
+
+.hero-buttons .btn-outline {
+  color: #ffffff !important;
+
+  background: transparent !important;
+
+  border: 2px solid #ffffff !important;
+}
+
+.hero-buttons .btn-outline:hover {
+  color: #172033 !important;
+
+  background: #ffffff !important;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   REMOVE MOUSE / SCROLL ICON
+========================================================= */
+
+.scroll-indicator,
+.scroll-mouse,
+.mouse,
+.mouse-icon,
+.scroll-icon,
+.mouse-scroll,
+.scroll-down {
+  display: none !important;
+}
+
+
+/* =========================================================
+   COMMON SECTION HEADER
 ========================================================= */
 
 .section-header {
   text-align: center;
-  margin-bottom: 42px;
+
+  margin: 0 0 30px;
 }
 
 .section-tag {
   display: inline-block;
-  margin-bottom: 10px;
+
+  margin: 0 0 8px;
 
   color: #2563eb;
 
   font-size: 13px;
+
   font-weight: 800;
 
   letter-spacing: 1.8px;
+
+  line-height: 1.3;
+
   text-transform: uppercase;
 }
 
@@ -43,16 +189,18 @@
   color: #172033;
 
   font-size: 38px;
+
   font-weight: 800;
 
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .underline {
   width: 65px;
+
   height: 4px;
 
-  margin: 16px auto;
+  margin: 15px auto 12px;
 
   border-radius: 10px;
 
@@ -62,11 +210,12 @@
 .section-subtitle {
   max-width: 720px;
 
-  margin: 12px auto 0;
+  margin: 10px auto 0;
 
   color: #64748b;
 
   font-size: 16px;
+
   line-height: 1.7;
 }
 
@@ -79,47 +228,38 @@
   width: 100% !important;
 
   height: 108px !important;
+
   min-height: 108px !important;
+
   max-height: 108px !important;
 
   margin: 0 !important;
+
   padding: 0 !important;
 
   overflow: hidden !important;
 
-  box-sizing: border-box !important;
-
-  /* ONE COLOR */
   background: #0d224f !important;
 }
 
-
-/* =========================================================
-   DATE CONTAINER
-========================================================= */
-
 .conference-date-section .conference-date-container {
   width: 92% !important;
-  max-width: 1250px !important;
+
+  max-width: 1350px !important;
 
   height: 108px !important;
-  min-height: 108px !important;
-  max-height: 108px !important;
 
   margin: 0 auto !important;
+
   padding: 0 !important;
 
   display: flex !important;
-
-  flex-direction: row !important;
 
   align-items: center !important;
 
   justify-content: space-between !important;
 
   gap: 30px !important;
-
-  box-sizing: border-box !important;
 }
 
 
@@ -130,23 +270,22 @@
 .conference-date-section .date-heading {
   flex: 1 !important;
 
+  min-width: 0 !important;
+
   margin: 0 !important;
+
   padding: 0 !important;
-
-  height: auto !important;
-
-  min-width: 0;
 }
 
 .conference-date-section .small-heading {
   display: block !important;
 
-  margin: 0 0 5px 0 !important;
-  padding: 0 !important;
+  margin: 0 0 5px !important;
 
   color: #dbeafe !important;
 
   font-size: 11px !important;
+
   line-height: 1 !important;
 
   font-weight: 800 !important;
@@ -158,11 +297,11 @@
 
 .conference-date-section .date-heading h2 {
   margin: 0 !important;
-  padding: 0 !important;
 
   color: #ffffff !important;
 
   font-size: 30px !important;
+
   line-height: 1 !important;
 
   font-weight: 800 !important;
@@ -170,22 +309,17 @@
 
 
 /* =========================================================
-   COUNTDOWN
+   COUNTDOWN CONTAINER
 ========================================================= */
 
 .conference-date-section .countdown-container {
   display: flex !important;
 
   align-items: center !important;
+
   justify-content: flex-end !important;
 
   gap: 10px !important;
-
-  width: auto !important;
-  height: auto !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
 
   flex-shrink: 0 !important;
 }
@@ -197,22 +331,22 @@
 
 .conference-date-section .countdown-card {
   width: 78px !important;
+
   min-width: 78px !important;
 
   height: 72px !important;
-  min-height: 72px !important;
 
-  margin: 0 !important;
-  padding: 0 !important;
+  min-height: 72px !important;
 
   display: flex !important;
 
   flex-direction: column !important;
 
   align-items: center !important;
+
   justify-content: center !important;
 
-  box-sizing: border-box !important;
+  padding: 0 !important;
 
   background: #ffffff !important;
 
@@ -224,7 +358,6 @@
 
 .conference-date-section .countdown-number {
   margin: 0 !important;
-  padding: 0 !important;
 
   color: #172033 !important;
 
@@ -236,8 +369,7 @@
 }
 
 .conference-date-section .countdown-label {
-  margin: 5px 0 0 0 !important;
-  padding: 0 !important;
+  margin: 5px 0 0 !important;
 
   color: #2563eb !important;
 
@@ -246,8 +378,6 @@
   line-height: 1 !important;
 
   font-weight: 900 !important;
-
-  letter-spacing: 0.5px !important;
 }
 
 
@@ -263,13 +393,80 @@
   background: #ffffff;
 }
 
+
+/* =========================================================
+   DESKTOP TWO-COLUMN LAYOUT
+========================================================= */
+
+.conference-info-section > .container {
+  display: grid;
+
+  grid-template-columns:
+    minmax(430px, 0.9fr)
+    minmax(680px, 1.5fr);
+
+  align-items: center;
+
+  gap: 50px;
+
+  max-width: 1350px;
+}
+
+
+/* =========================================================
+   LEFT HEADING
+========================================================= */
+
+.conference-info-section .section-header {
+  width: 100%;
+
+  margin: 0;
+
+  text-align: center;
+}
+
+.conference-info-section .section-header .section-tag {
+  margin-bottom: 10px;
+}
+
+.conference-info-section .section-header h2 {
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  font-size: 38px;
+
+  line-height: 1.15;
+}
+
+.conference-info-section .section-header .underline {
+  margin: 15px auto 12px;
+}
+
+.conference-info-section .section-header .section-subtitle {
+  max-width: 560px;
+
+  margin: 0 auto;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   INFORMATION CARD GRID
+========================================================= */
+
 .conference-info-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
 
-  gap: 18px;
+  gap: 14px;
 
   align-items: stretch;
 }
@@ -281,31 +478,31 @@
 
 .info-card {
   width: 100%;
+
   min-width: 0;
 
-  height: 145px;
-  min-height: 145px;
-  max-height: 145px;
+  height: 185px;
 
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 14px;
+  min-height: 185px;
 
   padding: 18px;
 
-  box-sizing: border-box;
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 13px;
 
   background: #ffffff;
 
-  border:
-    1px solid #dbe3ef;
+  border: 1px solid #dbe3ef;
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   box-shadow:
-    0 6px 18px rgba(15, 23, 42, 0.06);
+    0 7px 20px rgba(15, 23, 42, 0.06);
 
   overflow: hidden;
 
@@ -328,16 +525,18 @@
 
 .info-icon {
   width: 44px;
+
   min-width: 44px;
 
   height: 44px;
 
+  flex-shrink: 0;
+
   display: flex;
 
   align-items: center;
-  justify-content: center;
 
-  flex-shrink: 0;
+  justify-content: center;
 
   color: #2563eb;
 
@@ -352,6 +551,8 @@
 ========================================================= */
 
 .info-card > div:last-child {
+  width: 100%;
+
   min-width: 0;
 
   flex: 1;
@@ -369,6 +570,8 @@
   line-height: 1.25;
 
   font-weight: 800;
+
+  word-break: normal;
 }
 
 .info-card p {
@@ -380,9 +583,9 @@
 
   line-height: 1.45;
 
-  overflow-wrap: break-word;
-
   word-break: normal;
+
+  overflow-wrap: break-word;
 }
 
 
@@ -391,7 +594,7 @@
 ========================================================= */
 
 .features-section {
-  padding: 75px 0;
+  padding: 55px 0;
 
   background: #f8fafc;
 }
@@ -402,20 +605,19 @@
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
 
-  gap: 20px;
+  gap: 18px;
 }
 
 .feature-card {
   position: relative;
 
-  min-height: 245px;
+  min-height: 240px;
 
-  padding: 30px 25px;
+  padding: 27px 23px;
 
   background: #ffffff;
 
-  border:
-    1px solid #e2e8f0;
+  border: 1px solid #e2e8f0;
 
   border-radius: 9px;
 
@@ -438,6 +640,7 @@
   position: absolute;
 
   top: 16px;
+
   right: 18px;
 
   color: #010811;
@@ -449,14 +652,16 @@
 
 .feature-icon {
   width: 55px;
+
   height: 55px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   color: #2563eb;
 
@@ -471,6 +676,8 @@
   color: #172033;
 
   font-size: 18px;
+
+  line-height: 1.25;
 
   font-weight: 800;
 }
@@ -487,9 +694,10 @@
 
 .card-line {
   width: 35px;
+
   height: 3px;
 
-  margin-top: 22px;
+  margin-top: 18px;
 
   background: #2563eb;
 
@@ -502,7 +710,7 @@
 ========================================================= */
 
 .about-section {
-  padding: 75px 0;
+  padding: 55px 0;
 
   background: #ffffff;
 }
@@ -513,7 +721,7 @@
   grid-template-columns:
     1fr 1fr;
 
-  gap: 60px;
+  gap: 55px;
 
   align-items: center;
 }
@@ -536,9 +744,10 @@
 
 .about-divider {
   width: 60px;
+
   height: 4px;
 
-  margin: 18px 0 23px;
+  margin: 15px 0 20px;
 
   background: #2563eb;
 
@@ -546,7 +755,7 @@
 }
 
 .about-content p {
-  margin: 0 0 16px;
+  margin: 0 0 13px;
 
   color: #475569;
 
@@ -564,6 +773,7 @@
   display: inline-flex;
 
   align-items: center;
+
   gap: 12px;
 
   margin-top: 8px;
@@ -582,9 +792,7 @@
 
   font-weight: 800;
 
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
+  transition: 0.25s ease;
 }
 
 .btn-primary:hover {
@@ -605,7 +813,7 @@
 
   overflow: hidden;
 
-  min-height: 400px;
+  height: 360px;
 
   border-radius: 10px;
 }
@@ -613,7 +821,7 @@
 .about-image-wrapper img {
   width: 100%;
 
-  height: 400px;
+  height: 360px;
 
   display: block;
 
@@ -637,6 +845,7 @@
   position: absolute;
 
   left: 24px;
+
   bottom: 24px;
 
   display: flex;
@@ -677,13 +886,13 @@
 ========================================================= */
 
 .highlight-section {
-  padding: 70px 0;
+  padding: 50px 0;
 
   background: #f8fafc;
 }
 
 .highlight-box {
-  padding: 60px;
+  padding: 50px;
 
   border-radius: 12px;
 
@@ -707,7 +916,7 @@
 }
 
 .highlight-content h2 {
-  margin: 0 0 18px;
+  margin: 0 0 15px;
 
   color: #ffffff;
 
@@ -733,21 +942,21 @@
 
   gap: 15px;
 
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .btn-outline {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 13px 23px;
 
   color: #ffffff;
 
-  border:
-    1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 
   border-radius: 6px;
 
@@ -772,7 +981,7 @@
 ========================================================= */
 
 .cta-section {
-  padding: 75px 20px;
+  padding: 55px 20px;
 
   text-align: center;
 
@@ -786,7 +995,7 @@
 }
 
 .cta-content h2 {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
 
   color: #172033;
 
@@ -812,7 +1021,7 @@
 
   gap: 15px;
 
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .btn-light,
@@ -820,6 +1029,7 @@
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 13px 26px;
@@ -838,8 +1048,7 @@
 
   background: #eff6ff;
 
-  border:
-    1px solid #bfdbfe;
+  border: 1px solid #bfdbfe;
 }
 
 .btn-dark {
@@ -850,66 +1059,37 @@
 
 
 /* =========================================================
-   LAPTOP / MACBOOK
+   LARGE DESKTOP
 ========================================================= */
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 1400px) {
 
-  .container {
-    width: 92%;
-    max-width: 1250px;
-  }
+  .conference-info-section > .container {
+    grid-template-columns:
+      minmax(500px, 0.95fr)
+      minmax(760px, 1.45fr);
 
-  /* Conference information */
-
-  .conference-info-section {
-    padding: 50px 0;
+    gap: 60px;
   }
 
   .conference-info-grid {
-    grid-template-columns:
-      repeat(4, minmax(0, 1fr));
-
     gap: 16px;
   }
 
   .info-card {
-    height: 145px;
-    min-height: 145px;
-    max-height: 145px;
+    height: 190px;
 
-    padding: 17px;
+    min-height: 190px;
 
-    gap: 12px;
-  }
-
-  .info-icon {
-    width: 42px;
-    min-width: 42px;
-
-    height: 42px;
+    padding: 19px;
   }
 
   .info-card h3 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .info-card p {
-    font-size: 12px;
-
-    line-height: 1.4;
-  }
-
-  /* Features */
-
-  .features-grid {
-    gap: 18px;
-  }
-
-  .feature-card {
-    min-height: 230px;
-
-    padding: 28px 23px;
+    font-size: 12.5px;
   }
 }
 
@@ -920,46 +1100,60 @@
 
 @media (max-width: 1199px) {
 
-  .conference-date-section {
-    height: 105px !important;
-    min-height: 105px !important;
-    max-height: 105px !important;
+  .conference-info-section > .container {
+    display: block;
+
+    width: 92%;
   }
 
-  .conference-date-section
-  .conference-date-container {
-    height: 105px !important;
-    min-height: 105px !important;
-    max-height: 105px !important;
-  }
-
-  .conference-date-section
-  .date-heading h2 {
-    font-size: 27px !important;
-  }
-
-  .conference-date-section
-  .countdown-card {
-    width: 70px !important;
-    min-width: 70px !important;
-
-    height: 66px !important;
-    min-height: 66px !important;
-  }
-
-  .conference-date-section
-  .countdown-number {
-    font-size: 23px !important;
-  }
-
-  .features-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+  .conference-info-section .section-header {
+    margin-bottom: 30px;
   }
 
   .conference-info-grid {
     grid-template-columns:
-      repeat(2, 1fr);
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  .info-card {
+    height: 150px;
+
+    min-height: 150px;
+  }
+
+  .features-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .conference-date-section {
+    height: 105px !important;
+
+    min-height: 105px !important;
+  }
+
+  .conference-date-section .conference-date-container {
+    height: 105px !important;
+  }
+
+
+  /* Tablet hero buttons */
+
+  .hero-buttons {
+    bottom: 35px !important;
+
+    gap: 10px !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    min-width: 100px !important;
+
+    padding: 7px 12px !important;
+
+    font-size: 11px !important;
   }
 }
 
@@ -971,518 +1165,774 @@
 @media (max-width: 750px) {
 
   .container {
-    width: 92%;
+    width: calc(100% - 30px);
   }
 
 
-  /* -------------------------------------------------------
-     CONFERENCE DATE
-  ------------------------------------------------------- */
+  /* =======================================================
+     HERO
+  ======================================================= */
 
-  .conference-date-section {
-    height: 145px !important;
-    min-height: 145px !important;
-    max-height: 145px !important;
+  .hero-section,
+  .hero,
+  .home-hero {
+    position: relative !important;
+
+    overflow: hidden !important;
   }
 
-  .conference-date-section
-  .conference-date-container {
 
-    width: 92% !important;
+  /* =======================================================
+     HERO BUTTONS - MOBILE
+  ======================================================= */
 
-    height: 145px !important;
-    min-height: 145px !important;
-    max-height: 145px !important;
+  .hero-buttons {
+    position: absolute !important;
+
+    left: 50% !important;
+
+    bottom: 18px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 70% !important;
+
+    max-width: 250px !important;
+
+    display: flex !important;
 
     flex-direction: column !important;
 
+    align-items: stretch !important;
+
     justify-content: center !important;
 
-    gap: 13px !important;
+    gap: 6px !important;
+
+    margin: 0 !important;
+
+    z-index: 20 !important;
   }
 
-  .conference-date-section
-  .date-heading {
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    padding: 7px 12px !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.2 !important;
+
+    border-radius: 6px !important;
+  }
+
+  .hero-buttons .btn-outline {
+    border-width: 2px !important;
+  }
+
+
+  /* =======================================================
+     REMOVE MOUSE
+  ======================================================= */
+
+  .scroll-indicator,
+  .scroll-mouse,
+  .mouse,
+  .mouse-icon,
+  .scroll-icon,
+  .mouse-scroll,
+  .scroll-down {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     COUNTDOWN
+  ======================================================= */
+
+  .conference-date-section {
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    max-height: none !important;
+
+    padding: 12px 10px !important;
+  }
+
+  .conference-date-section .conference-date-container {
+    width: 100% !important;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    flex-direction: column !important;
+
+    gap: 8px !important;
+  }
+
+  .conference-date-section .date-heading {
+    width: 100% !important;
 
     flex: none !important;
 
+    text-align: center !important;
+  }
+
+  .conference-date-section .small-heading {
+    font-size: 8px !important;
+
+    margin-bottom: 3px !important;
+  }
+
+  .conference-date-section .date-heading h2 {
+    font-size: 18px !important;
+
+    white-space: nowrap !important;
+  }
+
+  .conference-date-section .countdown-container {
+    width: 100% !important;
+
+    justify-content: center !important;
+
+    gap: 5px !important;
+  }
+
+  .conference-date-section .countdown-card {
+    width: 48px !important;
+
+    min-width: 48px !important;
+
+    height: 42px !important;
+
+    min-height: 42px !important;
+
+    border-radius: 5px !important;
+  }
+
+  .conference-date-section .countdown-number {
+    font-size: 15px !important;
+  }
+
+  .conference-date-section .countdown-label {
+    font-size: 5px !important;
+
+    margin-top: 3px !important;
+  }
+
+
+  /* =======================================================
+     CONFERENCE INFORMATION
+  ======================================================= */
+
+  .conference-info-section {
+    width: 100% !important;
+
+    padding: 38px 0 !important;
+  }
+
+  .conference-info-section > .container {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    margin: 0 auto !important;
+  }
+
+
+  /* Heading */
+
+  .conference-info-section .section-header {
+    width: 90% !important;
+
+    margin: 0 auto 28px !important;
+
+    text-align: center !important;
+  }
+
+  .conference-info-section .section-header .section-tag {
+    font-size: 10px !important;
+
+    letter-spacing: 1.5px !important;
+  }
+
+  .conference-info-section .section-header h2 {
+    width: 100% !important;
+
+    max-width: 340px !important;
+
+    margin: 0 auto !important;
+
+    font-size: 28px !important;
+
+    line-height: 1.15 !important;
+  }
+
+  .conference-info-section .section-header .underline {
+    margin: 13px auto 10px !important;
+  }
+
+  .conference-info-section .section-header .section-subtitle {
+    max-width: 340px !important;
+
+    margin: 0 auto !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.55 !important;
+  }
+
+
+  /* =======================================================
+     CENTERED INFORMATION GRID
+  ======================================================= */
+
+  .conference-info-grid {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 14px !important;
+
+    margin: 0 auto !important;
+  }
+
+
+  /* =======================================================
+     INFORMATION CARDS
+  ======================================================= */
+
+  .conference-info-grid .info-card {
+    width: 88% !important;
+
+    max-width: 360px !important;
+
+    min-width: 0 !important;
+
+    height: auto !important;
+
+    min-height: 96px !important;
+
+    max-height: none !important;
+
+    margin: 0 auto !important;
+
+    padding: 14px !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    gap: 14px !important;
+
+    text-align: left !important;
+
+    overflow: visible !important;
+  }
+
+  .conference-info-grid .info-icon {
+    width: 44px !important;
+
+    min-width: 44px !important;
+
+    height: 44px !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .conference-info-grid .info-card > div:last-child {
+    width: auto !important;
+
+    min-width: 0 !important;
+
+    flex: 1 !important;
+
+    overflow: visible !important;
+  }
+
+  .conference-info-grid .info-card h3 {
+    margin: 0 0 5px !important;
+
+    color: #172033 !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.25 !important;
+
+    font-weight: 800 !important;
+
+    word-break: normal !important;
+
+    overflow-wrap: normal !important;
+  }
+
+  .conference-info-grid .info-card p {
+    margin: 0 !important;
+
+    color: #64748b !important;
+
+    font-size: 12px !important;
+
+    line-height: 1.45 !important;
+
+    word-break: normal !important;
+
+    overflow-wrap: break-word !important;
+  }
+
+
+  /* =======================================================
+     WHY ATTEND
+  ======================================================= */
+
+  .features-section {
+    padding: 45px 0 !important;
+  }
+
+  .features-section > .container {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+  }
+
+  .features-section .section-header {
+    width: 90% !important;
+
+    margin-bottom: 25px !important;
+  }
+
+  .features-grid {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 14px !important;
+  }
+
+  .feature-card {
+    width: 88% !important;
+
+    max-width: 360px !important;
+
+    min-height: 0 !important;
+
+    margin: 0 auto !important;
+
+    padding: 24px 20px !important;
+  }
+
+
+  /* =======================================================
+     ABOUT
+  ======================================================= */
+
+  .about-section {
+    padding: 45px 0 !important;
+  }
+
+  .about-grid {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 30px !important;
+  }
+
+  .about-content {
     width: 100% !important;
 
     text-align: center !important;
   }
 
-  .conference-date-section
-  .date-heading h2 {
-
-    font-size: 23px !important;
-  }
-
-  .conference-date-section
-  .countdown-container {
-
-    width: 100% !important;
-
-    justify-content: center !important;
-
-    gap: 6px !important;
-  }
-
-  .conference-date-section
-  .countdown-card {
-
-    width: 62px !important;
-    min-width: 62px !important;
-
-    height: 58px !important;
-    min-height: 58px !important;
-  }
-
-  .conference-date-section
-  .countdown-number {
-
-    font-size: 19px !important;
-  }
-
-  .conference-date-section
-  .countdown-label {
-
-    font-size: 7px !important;
-  }
-
-
-  /* -------------------------------------------------------
-     CONFERENCE INFORMATION
-  ------------------------------------------------------- */
-
-  .conference-info-section {
-    padding: 50px 0;
-  }
-
-  .conference-info-grid {
-    grid-template-columns: 1fr;
-
-    gap: 14px;
-  }
-
-  .info-card {
-    width: 100%;
-
-    height: auto;
-
-    min-height: 105px;
-
-    max-height: none;
-
-    padding: 16px;
-  }
-
-  .info-icon {
-    width: 40px;
-    min-width: 40px;
-
-    height: 40px;
-  }
-
-  .info-card h3 {
-    font-size: 14px;
-  }
-
-  .info-card p {
-    font-size: 12px;
-
-    line-height: 1.5;
-  }
-
-
-  /* -------------------------------------------------------
-     FEATURES
-  ------------------------------------------------------- */
-
-  .features-section {
-    padding: 60px 0;
-  }
-
-  .section-header h2 {
-    font-size: 30px;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  /* -------------------------------------------------------
-     ABOUT
-  ------------------------------------------------------- */
-
-  .about-section {
-    padding: 60px 0;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
   .about-content h2 {
-    font-size: 31px;
+    font-size: 29px !important;
+  }
+
+  .about-divider {
+    margin: 15px auto 20px !important;
+  }
+
+  .about-content p {
+    font-size: 14px !important;
+
+    line-height: 1.7 !important;
   }
 
   .about-image-wrapper {
-    height: 350px;
+    width: 100% !important;
 
-    min-height: 350px;
+    height: 300px !important;
+
+    min-height: 300px !important;
   }
 
   .about-image-wrapper img {
-    height: 350px;
+    height: 300px !important;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      HIGHLIGHT
-  ------------------------------------------------------- */
+  ======================================================= */
 
   .highlight-section {
-    padding: 55px 0;
+    padding: 40px 0 !important;
   }
 
   .highlight-box {
-    padding: 40px 25px;
+    width: 88% !important;
+
+    max-width: 500px !important;
+
+    margin: 0 auto !important;
+
+    padding: 35px 22px !important;
   }
 
   .highlight-content h2 {
-    font-size: 32px;
+    font-size: 29px !important;
   }
 
   .highlight-buttons {
-    flex-direction: column;
+    flex-direction: column !important;
+
+    gap: 10px !important;
+  }
+
+  .highlight-buttons a {
+    width: 100% !important;
+
+    justify-content: center !important;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      CTA
-  ------------------------------------------------------- */
+  ======================================================= */
 
   .cta-section {
-    padding: 60px 20px;
+    padding: 45px 15px !important;
+  }
+
+  .cta-content {
+    width: 100% !important;
   }
 
   .cta-content h2 {
-    font-size: 32px;
+    font-size: 30px !important;
+  }
+
+  .cta-content p {
+    font-size: 14px !important;
   }
 
   .cta-buttons {
-    flex-direction: column;
+    flex-direction: column !important;
+
+    gap: 10px !important;
   }
 
   .btn-light,
   .btn-dark {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   SMALL PHONES
 ========================================================= */
 
 @media (max-width: 450px) {
 
+  .container {
+    width: calc(100% - 24px);
+  }
+
+
+  /* =======================================================
+     HERO BUTTONS
+  ======================================================= */
+
+  .hero-buttons {
+    width: 70% !important;
+
+    max-width: 220px !important;
+
+    bottom: 14px !important;
+
+    gap: 5px !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    padding: 6px 10px !important;
+
+    font-size: 10px !important;
+
+    border-radius: 5px !important;
+  }
+
+
+  /* =======================================================
+     COUNTDOWN
+  ======================================================= */
+
   .conference-date-section {
-    height: 140px !important;
-
-    min-height: 140px !important;
-
-    max-height: 140px !important;
+    padding: 10px 8px !important;
   }
 
-  .conference-date-section
-  .conference-date-container {
-
-    height: 140px !important;
-
-    min-height: 140px !important;
-
-    max-height: 140px !important;
+  .conference-date-section .date-heading h2 {
+    font-size: 17px !important;
   }
 
-  .conference-date-section
-  .date-heading h2 {
+  .conference-date-section .countdown-card {
+    width: 45px !important;
 
-    font-size: 21px !important;
+    min-width: 45px !important;
+
+    height: 40px !important;
+
+    min-height: 40px !important;
   }
 
-  .conference-date-section
-  .countdown-card {
-
-    width: 58px !important;
-    min-width: 58px !important;
-
-    height: 56px !important;
-    min-height: 56px !important;
+  .conference-date-section .countdown-number {
+    font-size: 14px !important;
   }
 
-  .conference-date-section
-  .countdown-number {
-
-    font-size: 18px !important;
+  .conference-date-section .countdown-label {
+    font-size: 5px !important;
   }
 
-  .conference-date-section
-  .countdown-label {
 
-    font-size: 6px !important;
-  }
-}
-/* =========================================================
-   COMPACT HOMEPAGE SPACING
-   Reduces excessive gaps between sections
-========================================================= */
-
-/* General section spacing */
-
-.conference-info-section {
-  padding-top: 35px !important;
-  padding-bottom: 35px !important;
-}
-
-.features-section {
-  padding-top: 45px !important;
-  padding-bottom: 45px !important;
-}
-
-.about-section {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-}
-
-.highlight-section {
-  padding-top: 45px !important;
-  padding-bottom: 45px !important;
-}
-
-.cta-section {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-}
-
-
-/* Section headings */
-
-.section-header {
-  margin-bottom: 28px !important;
-}
-
-.section-header h2 {
-  margin-bottom: 0 !important;
-}
-
-.section-tag {
-  margin-bottom: 7px !important;
-}
-
-.underline {
-  margin-top: 12px !important;
-  margin-bottom: 10px !important;
-}
-
-.section-subtitle {
-  margin-top: 8px !important;
-}
-
-
-/* Conference information cards */
-
-.conference-info-grid {
-  gap: 15px !important;
-}
-
-.info-card {
-  height: 135px !important;
-  min-height: 135px !important;
-  max-height: 135px !important;
-}
-
-
-/* Why Attend */
-
-.features-grid {
-  gap: 16px !important;
-}
-
-.feature-card {
-  min-height: 220px !important;
-  padding: 25px 23px !important;
-}
-
-.feature-icon {
-  margin-bottom: 18px !important;
-}
-
-.card-line {
-  margin-top: 18px !important;
-}
-
-
-/* About */
-
-.about-grid {
-  gap: 45px !important;
-}
-
-.about-divider {
-  margin-top: 15px !important;
-  margin-bottom: 20px !important;
-}
-
-.about-content p {
-  margin-bottom: 13px !important;
-}
-
-.about-image-wrapper {
-  min-height: 360px !important;
-}
-
-.about-image-wrapper img {
-  height: 360px !important;
-}
-
-
-/* Highlight */
-
-.highlight-box {
-  padding: 45px !important;
-}
-
-.highlight-content h2 {
-  margin-bottom: 15px !important;
-}
-
-.highlight-buttons {
-  margin-top: 22px !important;
-}
-
-
-/* CTA */
-
-.cta-content h2 {
-  margin-bottom: 10px !important;
-}
-
-.cta-buttons {
-  margin-top: 22px !important;
-}
-
-
-/* =========================================================
-   MACBOOK / DESKTOP
-========================================================= */
-
-@media (min-width: 1200px) {
+  /* =======================================================
+     CONFERENCE INFORMATION
+  ======================================================= */
 
   .conference-info-section {
-    padding-top: 32px !important;
-    padding-bottom: 32px !important;
+    padding: 32px 0 !important;
   }
+
+  .conference-info-section .section-header {
+    width: 92% !important;
+
+    margin-bottom: 24px !important;
+  }
+
+  .conference-info-section .section-header h2 {
+    font-size: 26px !important;
+
+    max-width: 320px !important;
+  }
+
+  .conference-info-grid {
+    gap: 12px !important;
+  }
+
+  .conference-info-grid .info-card {
+    width: 88% !important;
+
+    max-width: 340px !important;
+
+    min-height: 90px !important;
+
+    padding: 12px !important;
+
+    gap: 12px !important;
+  }
+
+  .conference-info-grid .info-icon {
+    width: 40px !important;
+
+    min-width: 40px !important;
+
+    height: 40px !important;
+  }
+
+  .conference-info-grid .info-card h3 {
+    font-size: 13px !important;
+
+    line-height: 1.25 !important;
+  }
+
+  .conference-info-grid .info-card p {
+    font-size: 11px !important;
+
+    line-height: 1.4 !important;
+  }
+
+
+  /* =======================================================
+     FEATURES
+  ======================================================= */
 
   .features-section {
-    padding-top: 42px !important;
-    padding-bottom: 42px !important;
+    padding: 40px 0 !important;
   }
 
-  .about-section {
-    padding-top: 48px !important;
-    padding-bottom: 48px !important;
+  .features-section .section-header {
+    width: 92% !important;
   }
 
-  .highlight-section {
-    padding-top: 42px !important;
-    padding-bottom: 42px !important;
-  }
-
-  .cta-section {
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
-  }
-
-  .section-header {
-    margin-bottom: 25px !important;
-  }
-
-  .info-card {
-    height: 135px !important;
-    min-height: 135px !important;
-    max-height: 135px !important;
+  .features-grid {
+    gap: 12px !important;
   }
 
   .feature-card {
-    min-height: 215px !important;
-  }
-}
+    width: 88% !important;
 
+    max-width: 340px !important;
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 750px) {
-
-  .conference-info-section {
-    padding-top: 35px !important;
-    padding-bottom: 35px !important;
+    padding: 22px 18px !important;
   }
 
-  .features-section {
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
-  }
 
-  .about-section {
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
-  }
+  /* =======================================================
+     ABOUT
+  ======================================================= */
 
-  .highlight-section {
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
-  }
-
-  .cta-section {
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
-  }
-
-  .section-header {
-    margin-bottom: 25px !important;
-  }
-
-  .info-card {
-    height: auto !important;
-    min-height: 100px !important;
-    max-height: none !important;
-  }
-
-  .feature-card {
-    min-height: 0 !important;
-    padding: 25px !important;
-  }
-
-  .about-grid {
-    gap: 30px !important;
+  .about-content h2 {
+    font-size: 27px !important;
   }
 
   .about-image-wrapper {
-    min-height: 300px !important;
-    height: 300px !important;
+    height: 240px !important;
+
+    min-height: 240px !important;
   }
 
   .about-image-wrapper img {
-    height: 300px !important;
+    height: 240px !important;
   }
 
+
+  /* =======================================================
+     HIGHLIGHT
+  ======================================================= */
+
   .highlight-box {
-    padding: 35px 25px !important;
+    width: 90% !important;
+
+    padding: 30px 18px !important;
+  }
+
+  .highlight-content h2 {
+    font-size: 27px !important;
+  }
+
+
+  /* =======================================================
+     CTA
+  ======================================================= */
+
+  .cta-content h2 {
+    font-size: 28px !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero-buttons {
+    width: 72% !important;
+
+    max-width: 200px !important;
+
+    bottom: 10px !important;
+
+    gap: 4px !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    padding: 5px 8px !important;
+
+    font-size: 9px !important;
+  }
+
+
+  /* Countdown */
+
+  .conference-date-section .date-heading h2 {
+    font-size: 15px !important;
+  }
+
+  .conference-date-section .countdown-card {
+    width: 42px !important;
+
+    min-width: 42px !important;
+
+    height: 38px !important;
+
+    min-height: 38px !important;
+  }
+
+  .conference-date-section .countdown-number {
+    font-size: 13px !important;
+  }
+
+  .conference-date-section .countdown-label {
+    font-size: 4px !important;
+  }
+
+
+  /* Information */
+
+  .conference-info-grid .info-card {
+    width: 90% !important;
+
+    max-width: 320px !important;
+  }
+
+  .conference-info-grid .info-card h3 {
+    font-size: 12px !important;
+  }
+
+  .conference-info-grid .info-card p {
+    font-size: 10px !important;
+  }
+
+
+  /* Features */
+
+  .feature-card {
+    width: 90% !important;
+
+    max-width: 320px !important;
   }
 }
