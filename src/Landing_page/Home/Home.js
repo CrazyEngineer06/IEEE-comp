@@ -212,7 +212,7 @@ export default function Home() {
             </span>
 
             <h2>
-              24th &amp; 25th September
+              24th &amp; 25th September 2027
             </h2>
 
           </motion.div>

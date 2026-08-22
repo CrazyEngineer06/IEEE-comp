@@ -58,6 +58,7 @@ function Navbar() {
 
         {/* RIGHT - IEEE */}
         <div className="conference-ieee">
+
           <div className="ieee-text">
             IEEE
           </div>
@@ -65,6 +66,7 @@ function Navbar() {
           <div className="ieee-subtext">
             International Conference
           </div>
+
         </div>
 
       </div>
@@ -78,7 +80,8 @@ function Navbar() {
 
         <div className="navbar-container">
 
-          {/* Desktop Navigation */}
+          {/* DESKTOP NAVIGATION */}
+
           <ul className="nav-link">
 
             {navItems.map(([path, label]) => (
@@ -94,7 +97,8 @@ function Navbar() {
           </ul>
 
 
-          {/* Hamburger */}
+          {/* HAMBURGER */}
+
           <button
             className={`hamburger ${
               menuOpen ? "open" : ""
@@ -173,6 +177,30 @@ function Navbar() {
             IEEE International Conference on
             Quantum Informatics, Communication
             Systems and Applications
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
+          MICROSOFT CMT NOTICE
+      ====================================================== */}
+
+      <div className="cmt-bar">
+
+        <div className="cmt-window">
+
+          <div className="cmt-text">
+
+            The Microsoft CMT service was used for managing the
+            peer-reviewing process for this conference.
+            This service was provided for free by Microsoft and
+            they bore all expenses, including costs for Azure
+            cloud services as well as for software development
+            and support.
 
           </div>
 
