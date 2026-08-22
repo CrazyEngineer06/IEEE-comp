@@ -1,8 +1,1210 @@
+/* =========================================================
+   HOME PAGE
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
 * {
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.home-page {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1250px;
+  margin: 0 auto;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.underline {
+  width: 65px;
+  height: 4px;
+
+  margin: 14px auto;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+}
+
+.section-subtitle {
+  max-width: 720px;
+
+  margin: 12px auto 0;
+
+  color: #64748b;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONFERENCE DATE + COUNTDOWN
+========================================================= */
+
+.conference-date-section {
+  width: 100% !important;
+
+  height: 108px !important;
+  min-height: 108px !important;
+  max-height: 108px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  overflow: hidden !important;
+
+  box-sizing: border-box !important;
+
+  background: linear-gradient(
+    to bottom,
+    #172033 0%,
+    #172033 50%,
+    #2563eb 50%,
+    #2563eb 100%
+  ) !important;
+}
+
+.conference-date-container {
+  width: 90% !important;
+  max-width: 1250px !important;
+
+  height: 108px !important;
+  min-height: 108px !important;
+  max-height: 108px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  gap: 30px !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.date-heading {
+  flex: 1 !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.small-heading {
+  display: block !important;
+
+  margin: 0 0 5px 0 !important;
+  padding: 0 !important;
+
+  color: #bfdbfe !important;
+
+  font-size: 11px !important;
+  line-height: 1 !important;
+
+  font-weight: 800 !important;
+
+  letter-spacing: 1.5px !important;
+
+  text-transform: uppercase !important;
+}
+
+.date-heading h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 30px !important;
+  line-height: 1 !important;
+
+  font-weight: 800 !important;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.countdown-container {
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: flex-end !important;
+
+  gap: 9px !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  flex-shrink: 0 !important;
+}
+
+.countdown-card {
+  width: 78px !important;
+  height: 72px !important;
+
+  min-width: 78px !important;
+  min-height: 72px !important;
+
+  max-width: 78px !important;
+  max-height: 72px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
+
+  background: #ffffff !important;
+
+  border-radius: 6px !important;
+
+  box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.18) !important;
+}
+
+.countdown-number {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #172033 !important;
+
+  font-size: 26px !important;
+  line-height: 1 !important;
+
+  font-weight: 900 !important;
+}
+
+.countdown-label {
+  margin: 5px 0 0 0 !important;
+  padding: 0 !important;
+
+  color: #2563eb !important;
+
+  font-size: 8px !important;
+  line-height: 1 !important;
+
+  font-weight: 900 !important;
+
+  letter-spacing: 0.5px !important;
+}
+
+
+/* =========================================================
+   CONFERENCE INFORMATION
+========================================================= */
+
+.conference-info-section {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 45px 0;
+
+  margin: 0;
+
+  background: #ffffff;
+
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.conference-info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.info-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 7px 20px rgba(15, 23, 42, 0.05);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.info-icon {
+  width: 46px;
+  min-width: 46px;
+
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border-radius: 7px;
+}
+
+.info-card h3 {
+  margin: 0 0 5px;
+
+  color: #172033;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.info-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   WHY ATTEND
+   SAME WHITE BACKGROUND
+========================================================= */
+
+.features-section {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 45px 0;
+
+  margin: 0;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.features-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.feature-card {
+  position: relative;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 28px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.05);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 35px rgba(15, 23, 42, 0.1);
+}
+
+.feature-number {
+  position: absolute;
+
+  top: 15px;
+  right: 18px;
+
+  color: #dbeafe;
+
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border-radius: 8px;
+}
+
+.feature-card h3 {
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.feature-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card-line {
+  width: 35px;
+  height: 3px;
+
+  margin-top: 20px;
+
+  background: #2563eb;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   ABOUT
+   SAME WHITE BACKGROUND
+========================================================= */
+
+.about-section {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 55px 0;
+
+  margin: 0;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 55px;
+
+  align-items: center;
+
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.about-content {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.about-content h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 40px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.about-content h2 span {
+  color: #2563eb;
+}
+
+.about-divider {
+  width: 60px;
+  height: 4px;
+
+  margin: 18px 0 22px;
+
+  background: #2563eb;
+
+  border-radius: 10px;
+}
+
+.about-content p {
+  margin: 0 0 15px;
+
+  color: #475569;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 8px;
+
+  padding: 13px 23px;
+
+  color: #ffffff;
+
+  background: #2563eb;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.about-image-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  height: 380px !important;
+  min-height: 380px !important;
+
+  border-radius: 10px;
+}
+
+.about-image-wrapper img {
+  width: 100%;
+
+  height: 380px !important;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(15, 23, 42, 0.75),
+      transparent 55%
+    );
+}
+
+.about-image-caption {
+  position: absolute;
+
+  left: 25px;
+  bottom: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  color: #ffffff;
+}
+
+.about-image-caption strong {
+  font-size: 20px;
+}
+
+.about-image-caption span {
+  color: #dbeafe;
+
+  font-size: 14px;
+}
+
+.image-border {
+  position: absolute;
+
+  inset: 12px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 7px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HIGHLIGHT
+   SAME WHITE BACKGROUND
+========================================================= */
+
+.highlight-section {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 55px 0;
+
+  margin: 0;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.highlight-box {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 55px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #172033,
+      #1e40af
+    );
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.18);
+
+  box-sizing: border-box;
+}
+
+.highlight-content {
+  max-width: 700px;
+
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.highlight-content .section-tag {
+  color: #93c5fd;
+}
+
+.highlight-content h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 42px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+.highlight-content p {
+  margin: 0;
+
+  color: #dbeafe;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.highlight-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.btn-outline {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 24px;
+
+  color: #ffffff;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  transition: 0.25s ease;
+}
+
+.btn-outline:hover {
+  color: #172033;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   CTA
+   SAME WHITE BACKGROUND
+========================================================= */
+
+.cta-section {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 55px 20px;
+
+  margin: 0;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.cta-content {
+  max-width: 700px;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  margin: auto;
+}
+
+.cta-content h2 {
+  margin: 0 0 12px;
+
+  color: #172033;
+
+  font-size: 42px;
+
+  font-weight: 800;
+}
+
+.cta-content p {
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.btn-light,
+.btn-dark {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 27px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.btn-light {
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+}
+
+.btn-dark {
+  color: #ffffff;
+
+  background: #172033;
+}
+
+
+/* =========================================================
+   FORCE ONE BACKGROUND COLOR
+========================================================= */
+
+.home-page > section {
+  height: auto !important;
+  min-height: 0 !important;
+
+  box-sizing: border-box;
+}
+
+/* All normal homepage sections are WHITE */
+.home-page
+.conference-info-section,
+.home-page
+.features-section,
+.home-page
+.about-section,
+.home-page
+.highlight-section,
+.home-page
+.cta-section {
+  background: #ffffff !important;
+}
+
+
+/* =========================================================
+   REMOVE EXCESSIVE EMPTY SPACE
+========================================================= */
+
+.home-page section:not(.conference-date-section) {
+  min-height: 0 !important;
+}
+
+.home-page .container {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.home-page .features-grid,
+.home-page .conference-info-grid,
+.home-page .about-grid {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.home-page .feature-card,
+.home-page .info-card {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .conference-date-section {
+    height: 105px !important;
+    min-height: 105px !important;
+    max-height: 105px !important;
+  }
+
+  .conference-date-container {
+    height: 105px !important;
+    min-height: 105px !important;
+    max-height: 105px !important;
+  }
+
+  .date-heading h2 {
+    font-size: 27px !important;
+  }
+
+  .countdown-card {
+    width: 70px !important;
+    height: 66px !important;
+
+    min-width: 70px !important;
+    min-height: 66px !important;
+  }
+
+  .countdown-number {
+    font-size: 23px !important;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .conference-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .container {
+    width: 92%;
+  }
+
+
+  /* CONFERENCE DATE */
+
+  .conference-date-section {
+    height: 145px !important;
+    min-height: 145px !important;
+    max-height: 145px !important;
+  }
+
+  .conference-date-container {
+    width: 92% !important;
+
+    height: 145px !important;
+    min-height: 145px !important;
+    max-height: 145px !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    gap: 13px !important;
+  }
+
+  .date-heading {
+    flex: none !important;
+
+    width: 100% !important;
+
+    text-align: center !important;
+  }
+
+  .date-heading h2 {
+    font-size: 23px !important;
+  }
+
+  .countdown-container {
+    width: 100% !important;
+
+    justify-content: center !important;
+
+    gap: 6px !important;
+  }
+
+  .countdown-card {
+    width: 62px !important;
+    height: 58px !important;
+
+    min-width: 62px !important;
+    min-height: 58px !important;
+  }
+
+  .countdown-number {
+    font-size: 19px !important;
+  }
+
+  .countdown-label {
+    font-size: 7px !important;
+  }
+
+
+  /* CONFERENCE INFORMATION */
+
+  .conference-info-section {
+    padding: 45px 0;
+  }
+
+  .conference-info-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+
+  /* FEATURES */
+
+  .features-section {
+    padding: 45px 0;
+  }
+
+  .section-header {
+    margin-bottom: 25px;
+  }
+
+  .section-header h2 {
+    font-size: 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-content h2 {
+    font-size: 31px;
+  }
+
+  .about-image-wrapper {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  .about-image-wrapper img {
+    height: 320px !important;
+  }
+
+
+  /* HIGHLIGHT */
+
+  .highlight-section {
+    padding: 50px 0;
+  }
+
+  .highlight-box {
+    padding: 40px 25px;
+  }
+
+  .highlight-content h2 {
+    font-size: 32px;
+  }
+
+  .highlight-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  /* CTA */
+
+  .cta-section {
+    padding: 50px 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-light,
+  .btn-dark {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .conference-date-section {
+    height: 140px !important;
+    min-height: 140px !important;
+    max-height: 140px !important;
+  }
+
+  .conference-date-container {
+    height: 140px !important;
+    min-height: 140px !important;
+    max-height: 140px !important;
+  }
+
+  .date-heading h2 {
+    font-size: 21px !important;
+  }
+
+  .countdown-card {
+    width: 58px !important;
+    height: 56px !important;
+
+    min-width: 58px !important;
+    min-height: 56px !important;
+  }
+
+  .countdown-number {
+    font-size: 18px !important;
+  }
+
+  .countdown-label {
+    font-size: 6px !important;
+  }
+
+  .feature-card {
+    padding: 23px;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* img{

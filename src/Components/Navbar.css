@@ -1,171 +1,1015 @@
-/* ======================
-   BASE NAVBAR
-   ====================== */
-.navBar {
+/* =========================================================
+   MAIN CONFERENCE HEADER
+========================================================= */
+
+.conference-header {
   width: 100%;
   background: #ffffff;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 1000;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* ======================
-   CONTAINER
-   ====================== */
-.navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  height: 68px;
+
+/* =========================================================
+   TOP INSTITUTIONAL SECTION
+========================================================= */
+
+.conference-top {
+  width: 100%;
+
+  min-height: 145px;
+
+  display: grid;
+
+  grid-template-columns:
+    170px
+    minmax(500px, 1fr)
+    170px;
+
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 10px 40px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   AIT LOGO
+========================================================= */
+
+.conference-logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-/* ======================
-   LOGO
-   ====================== */
-.logo img {
-  height: 46px;
-  width: auto;
-  object-fit: contain;
+.conference-logo img {
+  width: 125px;
+  height: auto;
+
   display: block;
+
+  object-fit: contain;
 }
 
-/* ======================
-   DESKTOP NAV LINKS
-   ====================== */
-.nav-link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+/* =========================================================
+   CENTER CONFERENCE INFORMATION
+========================================================= */
+
+.conference-title {
+  text-align: center;
+  padding: 0 15px;
 }
+
+
+/* =========================================================
+   INSTITUTE NAME
+========================================================= */
+
+.conference-title h1 {
+  margin: 0 0 2px;
+
+  color: #172033;
+
+  font-size: 25px;
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* =========================================================
+   CONFERENCE TITLE
+========================================================= */
+
+.conference-title h2 {
+  margin: 0 0 7px;
+
+  color: #172033;
+
+  font-size: 36px;
+
+  line-height: 1.05;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   BLUE THEME STRIP
+========================================================= */
+
+.conference-theme {
+  display: inline-block;
+
+  max-width: 90%;
+
+  margin: 0;
+
+  padding: 8px 25px;
+
+  color: #ffffff;
+
+  background: #143171;
+
+  border-radius: 6px;
+
+  font-size: 17px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.18);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.conference-title p {
+  margin: 6px 0 0;
+
+  color: #0c1f39;
+
+  font-size: 14px;
+
+  line-height: 1.1;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   RIGHT IEEE AREA
+========================================================= */
+
+.conference-ieee {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #2563eb;
+
+  text-align: center;
+}
+
+.ieee-text {
+  font-family: Arial, sans-serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+}
+
+.ieee-subtext {
+  margin-top: 4px;
+
+  font-size: 10px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  color: #64748b;
+
+  max-width: 110px;
+}
+
+
+/* =========================================================
+   BLUE NAVBAR
+   COMPACT HEIGHT
+========================================================= */
+
+.navBar {
+  width: 100%;
+
+  background: #102e6f;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.12);
+
+  position: relative;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.navbar-container {
+  width: 96%;
+
+  max-width: 1500px;
+
+  /* COMPACT */
+  min-height: 39px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.nav-link {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   NAV ITEM
+========================================================= */
+
+.nav-link li {
+  position: relative;
+
+  display: flex;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
 
 .nav-link li a {
-  font-size: 14.5px;
-  font-weight: 500;
-  color: #1e293b;
+  /* COMPACT */
+  min-height: 39px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
   text-decoration: none;
-  padding: 7px 12px;
-  border-radius: 8px;
-  transition: color 0.25s ease, background 0.25s ease;
-  white-space: nowrap;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
+
+
+/* =========================================================
+   NAV HOVER
+========================================================= */
 
 .nav-link li a:hover {
-  color: #3b82f6;
-  background: rgba(59, 130, 246, 0.08);
+  background: rgba(255, 255, 255, 0.13);
+
+  color: #ffffff;
 }
 
-/* ======================
-   HAMBURGER (3-line animated)
-   ====================== */
+
+/* =========================================================
+   NAV UNDERLINE
+========================================================= */
+
+.nav-link li a::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 18px;
+
+  right: 18px;
+
+  height: 3px;
+
+  background: #ffffff;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.nav-link li a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
 .hamburger {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  padding: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.2s;
-}
 
-.hamburger:hover {
-  background: rgba(59, 130, 246, 0.08);
+  width: 45px;
+
+  height: 39px;
+
+  margin: auto 0 auto auto;
+
+  padding: 8px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
 }
 
 .hamburger span {
-  display: block;
-  width: 100%;
-  height: 2.5px;
-  background: #1e293b;
-  border-radius: 4px;
-  transition: transform 0.35s ease, opacity 0.25s ease, width 0.25s ease;
-  transform-origin: center;
+  width: 25px;
+
+  height: 3px;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
-/* Animate to × when open */
+
+/* =========================================================
+   HAMBURGER ANIMATION
+========================================================= */
+
 .hamburger.open span:nth-child(1) {
-  transform: translateY(7.5px) rotate(45deg);
+  transform:
+    translateY(8px)
+    rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
-  width: 0;
 }
+
 .hamburger.open span:nth-child(3) {
-  transform: translateY(-7.5px) rotate(-45deg);
+  transform:
+    translateY(-8px)
+    rotate(-45deg);
 }
 
-/* ======================
+
+/* =========================================================
    MOBILE DRAWER
-   ====================== */
+========================================================= */
+
 .mobile-drawer {
-  /* Hidden by default — sits directly below the navbar */
-  max-height: 0;
-  overflow: hidden;
-  background: #ffffff;
-  border-top: 1px solid transparent;
-  transition: max-height 0.38s ease, border-color 0.2s;
-  /* Ensure it stacks correctly below navbar container */
+  display: none;
+}
+
+
+/* =========================================================
+   SPOTLIGHT
+   COMPACT HEIGHT
+========================================================= */
+
+.spotlight-bar {
   width: 100%;
-}
 
-.mobile-drawer.active {
-  max-height: 100vh;
-  border-top-color: #e2e8f0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
-}
+  /* REDUCED FROM 50px */
+  height: 38px;
 
-.mobile-nav-link {
-  list-style: none;
-  margin: 0;
-  padding: 8px 0 16px;
-}
-
-.mobile-nav-link li {
-  border-bottom: 1px solid #f1f5f9;
-}
-
-.mobile-nav-link li:last-child {
-  border-bottom: none;
-}
-
-.mobile-nav-link li a {
   display: flex;
+
   align-items: center;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #1e293b;
-  text-decoration: none;
-  transition: color 0.2s, background 0.2s, padding-left 0.2s;
+
+  background: #ffffff;
+
+  border-bottom:
+    1px solid #e2e8f0;
+
+  overflow: hidden;
 }
 
-.mobile-nav-link li a:hover {
-  color: #3b82f6;
-  background: rgba(59, 130, 246, 0.05);
-  padding-left: 36px;
+
+/* =========================================================
+   SPOTLIGHT LABEL
+========================================================= */
+
+.spotlight-label {
+  height: 100%;
+
+  padding: 0 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+
+  border-right:
+    1px solid #e2e8f0;
+
+  color: #172033;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
 }
 
-/* ======================
-   RESPONSIVE BREAKPOINT
-   ====================== */
-@media (max-width: 860px) {
-  .nav-link {
-    display: none; /* hide desktop links */
+
+/* =========================================================
+   SPOTLIGHT WINDOW
+========================================================= */
+
+.spotlight-window {
+  flex: 1;
+
+  height: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SPOTLIGHT TEXT
+========================================================= */
+
+.spotlight-text {
+  position: absolute;
+
+  top: 0;
+
+  left: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  white-space: nowrap;
+
+  color: #001034;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  animation:
+    spotlight-scroll 28s linear infinite;
+}
+
+
+/* =========================================================
+   SPOTLIGHT ANIMATION
+========================================================= */
+
+@keyframes spotlight-scroll {
+
+  0% {
+    transform: translateX(0);
   }
+
+  100% {
+    transform: translateX(-180%);
+  }
+
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .conference-top {
+    min-height: 130px;
+
+    grid-template-columns:
+      140px
+      minmax(400px, 1fr)
+      140px;
+
+    padding: 8px 25px;
+  }
+
+
+  .conference-logo img {
+    width: 100px;
+  }
+
+
+  .ieee-text {
+    font-size: 32px;
+  }
+
+
+  .conference-title h1 {
+    font-size: 20px;
+  }
+
+
+  .conference-title h2 {
+    font-size: 29px;
+
+    margin-bottom: 6px;
+  }
+
+
+  .conference-theme {
+    font-size: 14px;
+
+    padding: 7px 18px;
+  }
+
+
+  .conference-title p {
+    font-size: 12px;
+
+    margin-top: 5px;
+  }
+
+
+  /* COMPACT NAVBAR */
+
+  .navbar-container {
+    min-height: 36px;
+  }
+
+
+  .nav-link li a {
+    min-height: 36px;
+
+    padding: 0 13px;
+
+    font-size: 11px;
+  }
+
+
+  /* COMPACT SPOTLIGHT */
+
+  .spotlight-bar {
+    height: 36px;
+  }
+
+
+  .spotlight-label {
+    font-size: 12px;
+  }
+
+
+  .spotlight-text {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .conference-top {
+
+    min-height: 115px;
+
+    grid-template-columns:
+      100px
+      1fr
+      100px;
+
+    padding: 7px 15px;
+  }
+
+
+  .conference-logo img {
+    width: 80px;
+  }
+
+
+  .ieee-text {
+    font-size: 26px;
+  }
+
+
+  .ieee-subtext {
+    font-size: 8px;
+  }
+
+
+  .conference-title h1 {
+    font-size: 16px;
+
+    margin-bottom: 2px;
+  }
+
+
+  .conference-title h2 {
+    font-size: 23px;
+
+    margin-bottom: 5px;
+  }
+
+
+  .conference-theme {
+    font-size: 11px;
+
+    padding: 6px 12px;
+  }
+
+
+  .conference-title p {
+    font-size: 10px;
+
+    margin-top: 4px;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar-container {
+    min-height: 34px;
+  }
+
+
+  .nav-link li a {
+    min-height: 34px;
+
+    padding: 0 10px;
+
+    font-size: 10px;
+  }
+
+
+  /* SPOTLIGHT */
+
+  .spotlight-bar {
+    height: 34px;
+  }
+
+
+  .spotlight-label {
+    padding: 0 15px;
+
+    font-size: 11px;
+  }
+
+
+  .spotlight-text {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* =============================
+     TOP HEADER
+  ============================= */
+
+  .conference-top {
+
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 12px 12px;
+  }
+
+
+  .conference-logo {
+    justify-content: center;
+  }
+
+
+  .conference-logo img {
+    width: 75px;
+  }
+
+
+  .conference-title {
+    padding: 0;
+  }
+
+
+  .conference-title h1 {
+    font-size: 14px;
+
+    margin-bottom: 2px;
+  }
+
+
+  .conference-title h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+  }
+
+
+  .conference-theme {
+    max-width: 95%;
+
+    padding: 6px 10px;
+
+    font-size: 10px;
+  }
+
+
+  .conference-title p {
+    font-size: 9px;
+
+    margin-top: 4px;
+  }
+
+
+  .conference-ieee {
+    display: none;
+  }
+
+
+  /* =============================
+     NAVBAR
+  ============================= */
+
+  .navbar-container {
+
+    width: 100%;
+
+    min-height: 40px;
+
+    justify-content: flex-end;
+  }
+
+
+  .nav-link {
+    display: none;
+  }
+
+
+  /* =============================
+     HAMBURGER
+  ============================= */
 
   .hamburger {
-    display: flex; /* show hamburger */
+
+    display: flex;
+
+    width: 42px;
+
+    height: 40px;
+
+    margin-right: 15px;
   }
+
+
+  /* =============================
+     MOBILE DRAWER
+  ============================= */
+
+  .mobile-drawer {
+
+    display: block;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 10px 25px
+      rgba(0, 0, 0, 0.15);
+
+    transition:
+      max-height 0.35s ease;
+  }
+
+
+  .mobile-drawer.active {
+    max-height: 600px;
+  }
+
+
+  .mobile-nav-link {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 10px 0;
+  }
+
+
+  .mobile-nav-link li {
+
+    border-bottom:
+      1px solid #e5e7eb;
+  }
+
+
+  .mobile-nav-link li a {
+
+    display: block;
+
+    padding:
+      15px 25px;
+
+    color: #172033;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+
+  .mobile-nav-link li a:hover {
+
+    color: #2563eb;
+
+    background:
+      rgba(37, 99, 235, 0.06);
+  }
+
+
+  /* =============================
+     SPOTLIGHT
+  ============================= */
+
+  .spotlight-bar {
+
+    height: 32px;
+  }
+
+
+  .spotlight-label {
+
+    padding:
+      0 13px;
+
+    font-size: 10px;
+  }
+
+
+  .spotlight-text {
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .conference-top {
+    padding: 10px;
+  }
+
+
+  .conference-title h1 {
+    font-size: 12px;
+  }
+
+
+  .conference-title h2 {
+    font-size: 18px;
+  }
+
+
+  .conference-theme {
+    font-size: 9px;
+  }
+
+
+  .conference-title p {
+    font-size: 8px;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar-container {
+    min-height: 38px;
+  }
+
+
+  .hamburger {
+    height: 38px;
+
+    margin-right: 10px;
+  }
+
+
+  /* SPOTLIGHT */
+
+  .spotlight-bar {
+    height: 30px;
+  }
+
+
+  .spotlight-label {
+    padding:
+      0 9px;
+
+    font-size: 9px;
+  }
+
+
+  .spotlight-text {
+    font-size: 9px;
+  }
+
 }

@@ -1,261 +1,1488 @@
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
 }
 
-/* ================= FEATURES ================= */
-.features-section {
-  padding: 80px 0;
-  background: linear-gradient(to bottom, #fff, #f7f7f7);
+.container {
+  width: 92%;
+  max-width: 1250px;
+  margin: 0 auto;
 }
+
+
+/* =========================================================
+   COMMON
+========================================================= */
 
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 42px;
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
 }
 
 .section-header h2 {
-  font-size: 40px;
-  font-weight: bold;
-  color: #0f172a;
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 38px;
+  font-weight: 800;
+
+  line-height: 1.2;
 }
 
 .underline {
-  width: 80px;
+  width: 65px;
   height: 4px;
-  background: #3b82f6;
-  margin: 10px auto;
+
+  margin: 16px auto;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+}
+
+.section-subtitle {
+  max-width: 720px;
+
+  margin: 12px auto 0;
+
+  color: #64748b;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONFERENCE DATE / COUNTDOWN
+========================================================= */
+
+.conference-date-section {
+  width: 100% !important;
+
+  height: 108px !important;
+  min-height: 108px !important;
+  max-height: 108px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  overflow: hidden !important;
+
+  box-sizing: border-box !important;
+
+  /* ONE COLOR */
+  background: #0d224f !important;
+}
+
+
+/* =========================================================
+   DATE CONTAINER
+========================================================= */
+
+.conference-date-section .conference-date-container {
+  width: 92% !important;
+  max-width: 1250px !important;
+
+  height: 108px !important;
+  min-height: 108px !important;
+  max-height: 108px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  justify-content: space-between !important;
+
+  gap: 30px !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.conference-date-section .date-heading {
+  flex: 1 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  height: auto !important;
+
+  min-width: 0;
+}
+
+.conference-date-section .small-heading {
+  display: block !important;
+
+  margin: 0 0 5px 0 !important;
+  padding: 0 !important;
+
+  color: #dbeafe !important;
+
+  font-size: 11px !important;
+  line-height: 1 !important;
+
+  font-weight: 800 !important;
+
+  letter-spacing: 1.5px !important;
+
+  text-transform: uppercase !important;
+}
+
+.conference-date-section .date-heading h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 30px !important;
+  line-height: 1 !important;
+
+  font-weight: 800 !important;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.conference-date-section .countdown-container {
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: flex-end !important;
+
+  gap: 10px !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  flex-shrink: 0 !important;
+}
+
+
+/* =========================================================
+   COUNTDOWN CARDS
+========================================================= */
+
+.conference-date-section .countdown-card {
+  width: 78px !important;
+  min-width: 78px !important;
+
+  height: 72px !important;
+  min-height: 72px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
+
+  background: #ffffff !important;
+
+  border-radius: 7px !important;
+
+  box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.15) !important;
+}
+
+.conference-date-section .countdown-number {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #172033 !important;
+
+  font-size: 26px !important;
+
+  line-height: 1 !important;
+
+  font-weight: 900 !important;
+}
+
+.conference-date-section .countdown-label {
+  margin: 5px 0 0 0 !important;
+  padding: 0 !important;
+
+  color: #2563eb !important;
+
+  font-size: 8px !important;
+
+  line-height: 1 !important;
+
+  font-weight: 900 !important;
+
+  letter-spacing: 0.5px !important;
+}
+
+
+/* =========================================================
+   CONFERENCE INFORMATION
+========================================================= */
+
+.conference-info-section {
+  width: 100%;
+
+  padding: 55px 0;
+
+  background: #ffffff;
+}
+
+.conference-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   INFORMATION CARD
+========================================================= */
+
+.info-card {
+  width: 100%;
+  min-width: 0;
+
+  height: 145px;
+  min-height: 145px;
+  max-height: 145px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border:
+    1px solid #dbe3ef;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================================
+   INFORMATION ICON
+========================================================= */
+
+.info-icon {
+  width: 44px;
+  min-width: 44px;
+
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   INFORMATION CONTENT
+========================================================= */
+
+.info-card > div:last-child {
+  min-width: 0;
+
+  flex: 1;
+
+  overflow: hidden;
+}
+
+.info-card h3 {
+  margin: 0 0 7px;
+
+  color: #172033;
+
+  font-size: 15px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+}
+
+.info-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12.5px;
+
+  line-height: 1.45;
+
+  overflow-wrap: break-word;
+
+  word-break: normal;
+}
+
+
+/* =========================================================
+   WHY ATTEND
+========================================================= */
+
+.features-section {
+  padding: 75px 0;
+
+  background: #f8fafc;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
 }
 
 .feature-card {
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  border: 1px solid #eee;
-  transition: 0.3s;
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 30px 25px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e2e8f0;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 35px rgba(15, 23, 42, 0.10);
+}
+
+.feature-number {
+  position: absolute;
+
+  top: 16px;
+  right: 18px;
+
+  color: #010811;
+
+  font-size: 32px;
+
+  font-weight: 900;
 }
 
 .feature-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: white;
-  border-radius: 12px;
+  width: 55px;
+  height: 55px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+
+  margin-bottom: 22px;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border-radius: 8px;
 }
 
 .feature-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-size: 18px;
+
+  font-weight: 800;
 }
 
 .feature-card p {
-  color: #555;
-  line-height: 1.6;
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13.5px;
+
+  line-height: 1.65;
 }
 
-/* ================= ABOUT ================= */
+.card-line {
+  width: 35px;
+  height: 3px;
+
+  margin-top: 22px;
+
+  background: #2563eb;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
 .about-section {
-  background: #0f172a;
-  color: white;
-  padding: 100px 0;
+  padding: 75px 0;
+
+  background: #ffffff;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap: 60px;
+
   align-items: center;
 }
 
-.about-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.about-content h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 38px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
 }
 
-.about-section p {
-  margin-bottom: 20px;
-  color: #ddd;
-  line-height: 1.7;
+.about-content h2 span {
+  color: #2563eb;
 }
+
+.about-divider {
+  width: 60px;
+  height: 4px;
+
+  margin: 18px 0 23px;
+
+  background: #2563eb;
+
+  border-radius: 10px;
+}
+
+.about-content p {
+  margin: 0 0 16px;
+
+  color: #475569;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
 
 .btn-primary {
-  display: inline-block;
-  background: #3b82f6;
-  padding: 12px 26px;
-  border-radius: 8px;
-  color: white;
+  display: inline-flex;
+
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 8px;
+
+  padding: 13px 23px;
+
+  color: #ffffff;
+
+  background: #2563eb;
+
+  border-radius: 6px;
+
   text-decoration: none;
-  margin-top: 10px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
 .btn-primary:hover {
-  background: #2563eb;
+  color: #ffffff;
+
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
 }
 
-/* image */
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
 .about-image-wrapper {
   position: relative;
+
+  overflow: hidden;
+
+  min-height: 400px;
+
+  border-radius: 10px;
 }
 
 .about-image-wrapper img {
   width: 100%;
-  border-radius: 12px;
+
+  height: 400px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(15, 23, 42, 0.75),
+      transparent 55%
+    );
+}
+
+.about-image-caption {
+  position: absolute;
+
+  left: 24px;
+  bottom: 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  color: #ffffff;
+}
+
+.about-image-caption strong {
+  font-size: 19px;
+}
+
+.about-image-caption span {
+  color: #dbeafe;
+
+  font-size: 13px;
 }
 
 .image-border {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid #3b82f6;
-  border-radius: 12px;
-  z-index: -1;
+
+  inset: 12px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 7px;
+
+  pointer-events: none;
 }
 
-/* ================= CTA ================= */
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+.highlight-section {
+  padding: 70px 0;
+
+  background: #f8fafc;
+}
+
+.highlight-box {
+  padding: 60px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #172033,
+      #1e40af
+    );
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.18);
+}
+
+.highlight-content {
+  max-width: 700px;
+}
+
+.highlight-content .section-tag {
+  color: #93c5fd;
+}
+
+.highlight-content h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+.highlight-content p {
+  margin: 0;
+
+  color: #dbeafe;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.highlight-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.btn-outline {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 23px;
+
+  color: #ffffff;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  transition: 0.25s ease;
+}
+
+.btn-outline:hover {
+  color: #172033;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
 .cta-section {
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
-  padding: 80px 20px;
+  padding: 75px 20px;
+
   text-align: center;
+
+  background: #ffffff;
+}
+
+.cta-content {
+  max-width: 700px;
+
+  margin: auto;
 }
 
 .cta-content h2 {
-  color: white;
-  font-size: 34px;
-  margin-bottom: 10px;
+  margin: 0 0 15px;
+
+  color: #172033;
+
+  font-size: 40px;
+
+  font-weight: 800;
 }
 
 .cta-content p {
-  color: #e0e0e0;
-  margin-bottom: 30px;
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.8;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 20px;
+
   justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.btn-light,
+.btn-dark {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 26px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 800;
 }
 
 .btn-light {
-  background: white;
-  color: #3b82f6;
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border:
+    1px solid #bfdbfe;
 }
 
 .btn-dark {
-  background: #0f172a;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
+  color: #ffffff;
+
+  background: #172033;
 }
 
-.btn-light:hover,
-.btn-dark:hover {
-  transform: scale(1.05);
-}
 
-/* ================= RESPONSIVE ================= */
+/* =========================================================
+   LAPTOP / MACBOOK
+========================================================= */
 
-@media (max-width: 992px) {
-  /* Tablet view: 2 columns for features */
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (min-width: 1200px) and (max-width: 1600px) {
 
-  /* Stack about section vertically */
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  /* 1. Make container wider to use more screen real estate */
   .container {
-    width: 95%; /* Spread closer to the edges */
-    padding: 0 10px;
+    width: 92%;
+    max-width: 1250px;
   }
 
-  /* 2. Features: One card per row, full width */
-  .features-grid {
-    grid-template-columns: 1fr; 
+  /* Conference information */
+
+  .conference-info-section {
+    padding: 50px 0;
+  }
+
+  .conference-info-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
     gap: 16px;
   }
 
-  .feature-card {
-    width: 100%; /* Ensure card fills the grid track */
-    box-sizing: border-box;
-  }
+  .info-card {
+    height: 145px;
+    min-height: 145px;
+    max-height: 145px;
 
-  /* 3. About Section: Ensure text and image fill the screen width */
-  .about-grid {
-    grid-template-columns: 1fr; /* Force single column */
-    display: block; /* Fallback for older browsers to ensure stacking */
-  }
+    padding: 17px;
 
-  .about-grid > div {
-    width: 100%;
-    margin-bottom: 30px; /* Space between text and image */
-  }
-
-  .about-section h2 {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .about-section p {
-    font-size: 16px;
-    text-align: justify; /* Optional: makes text look "spread" and clean */
-  }
-
-  .about-image-wrapper {
-    width: 100% !important;
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .about-image-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Hide the decorative border on mobile to prevent overflow */
-  .image-border {
-    display: none;
-  }
-
-  /* 4. Buttons: Full width for better mobile UX */
-  .cta-buttons {
-    flex-direction: column;
     gap: 12px;
   }
 
-  .btn-light, .btn-dark, .btn-primary {
-    display: block;
+  .info-icon {
+    width: 42px;
+    min-width: 42px;
+
+    height: 42px;
+  }
+
+  .info-card h3 {
+    font-size: 14px;
+  }
+
+  .info-card p {
+    font-size: 12px;
+
+    line-height: 1.4;
+  }
+
+  /* Features */
+
+  .features-grid {
+    gap: 18px;
+  }
+
+  .feature-card {
+    min-height: 230px;
+
+    padding: 28px 23px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .conference-date-section {
+    height: 105px !important;
+    min-height: 105px !important;
+    max-height: 105px !important;
+  }
+
+  .conference-date-section
+  .conference-date-container {
+    height: 105px !important;
+    min-height: 105px !important;
+    max-height: 105px !important;
+  }
+
+  .conference-date-section
+  .date-heading h2 {
+    font-size: 27px !important;
+  }
+
+  .conference-date-section
+  .countdown-card {
+    width: 70px !important;
+    min-width: 70px !important;
+
+    height: 66px !important;
+    min-height: 66px !important;
+  }
+
+  .conference-date-section
+  .countdown-number {
+    font-size: 23px !important;
+  }
+
+  .features-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .conference-info-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .container {
+    width: 92%;
+  }
+
+
+  /* -------------------------------------------------------
+     CONFERENCE DATE
+  ------------------------------------------------------- */
+
+  .conference-date-section {
+    height: 145px !important;
+    min-height: 145px !important;
+    max-height: 145px !important;
+  }
+
+  .conference-date-section
+  .conference-date-container {
+
+    width: 92% !important;
+
+    height: 145px !important;
+    min-height: 145px !important;
+    max-height: 145px !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    gap: 13px !important;
+  }
+
+  .conference-date-section
+  .date-heading {
+
+    flex: none !important;
+
+    width: 100% !important;
+
+    text-align: center !important;
+  }
+
+  .conference-date-section
+  .date-heading h2 {
+
+    font-size: 23px !important;
+  }
+
+  .conference-date-section
+  .countdown-container {
+
+    width: 100% !important;
+
+    justify-content: center !important;
+
+    gap: 6px !important;
+  }
+
+  .conference-date-section
+  .countdown-card {
+
+    width: 62px !important;
+    min-width: 62px !important;
+
+    height: 58px !important;
+    min-height: 58px !important;
+  }
+
+  .conference-date-section
+  .countdown-number {
+
+    font-size: 19px !important;
+  }
+
+  .conference-date-section
+  .countdown-label {
+
+    font-size: 7px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     CONFERENCE INFORMATION
+  ------------------------------------------------------- */
+
+  .conference-info-section {
+    padding: 50px 0;
+  }
+
+  .conference-info-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .info-card {
     width: 100%;
-    text-align: center;
-    box-sizing: border-box;
+
+    height: auto;
+
+    min-height: 105px;
+
+    max-height: none;
+
+    padding: 16px;
+  }
+
+  .info-icon {
+    width: 40px;
+    min-width: 40px;
+
+    height: 40px;
+  }
+
+  .info-card h3 {
+    font-size: 14px;
+  }
+
+  .info-card p {
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+
+  /* -------------------------------------------------------
+     FEATURES
+  ------------------------------------------------------- */
+
+  .features-section {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* -------------------------------------------------------
+     ABOUT
+  ------------------------------------------------------- */
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .about-content h2 {
+    font-size: 31px;
+  }
+
+  .about-image-wrapper {
+    height: 350px;
+
+    min-height: 350px;
+  }
+
+  .about-image-wrapper img {
+    height: 350px;
+  }
+
+
+  /* -------------------------------------------------------
+     HIGHLIGHT
+  ------------------------------------------------------- */
+
+  .highlight-section {
+    padding: 55px 0;
+  }
+
+  .highlight-box {
+    padding: 40px 25px;
+  }
+
+  .highlight-content h2 {
+    font-size: 32px;
+  }
+
+  .highlight-buttons {
+    flex-direction: column;
+  }
+
+
+  /* -------------------------------------------------------
+     CTA
+  ------------------------------------------------------- */
+
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-light,
+  .btn-dark {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .conference-date-section {
+    height: 140px !important;
+
+    min-height: 140px !important;
+
+    max-height: 140px !important;
+  }
+
+  .conference-date-section
+  .conference-date-container {
+
+    height: 140px !important;
+
+    min-height: 140px !important;
+
+    max-height: 140px !important;
+  }
+
+  .conference-date-section
+  .date-heading h2 {
+
+    font-size: 21px !important;
+  }
+
+  .conference-date-section
+  .countdown-card {
+
+    width: 58px !important;
+    min-width: 58px !important;
+
+    height: 56px !important;
+    min-height: 56px !important;
+  }
+
+  .conference-date-section
+  .countdown-number {
+
+    font-size: 18px !important;
+  }
+
+  .conference-date-section
+  .countdown-label {
+
+    font-size: 6px !important;
+  }
+}
+/* =========================================================
+   COMPACT HOMEPAGE SPACING
+   Reduces excessive gaps between sections
+========================================================= */
+
+/* General section spacing */
+
+.conference-info-section {
+  padding-top: 35px !important;
+  padding-bottom: 35px !important;
+}
+
+.features-section {
+  padding-top: 45px !important;
+  padding-bottom: 45px !important;
+}
+
+.about-section {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.highlight-section {
+  padding-top: 45px !important;
+  padding-bottom: 45px !important;
+}
+
+.cta-section {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+
+/* Section headings */
+
+.section-header {
+  margin-bottom: 28px !important;
+}
+
+.section-header h2 {
+  margin-bottom: 0 !important;
+}
+
+.section-tag {
+  margin-bottom: 7px !important;
+}
+
+.underline {
+  margin-top: 12px !important;
+  margin-bottom: 10px !important;
+}
+
+.section-subtitle {
+  margin-top: 8px !important;
+}
+
+
+/* Conference information cards */
+
+.conference-info-grid {
+  gap: 15px !important;
+}
+
+.info-card {
+  height: 135px !important;
+  min-height: 135px !important;
+  max-height: 135px !important;
+}
+
+
+/* Why Attend */
+
+.features-grid {
+  gap: 16px !important;
+}
+
+.feature-card {
+  min-height: 220px !important;
+  padding: 25px 23px !important;
+}
+
+.feature-icon {
+  margin-bottom: 18px !important;
+}
+
+.card-line {
+  margin-top: 18px !important;
+}
+
+
+/* About */
+
+.about-grid {
+  gap: 45px !important;
+}
+
+.about-divider {
+  margin-top: 15px !important;
+  margin-bottom: 20px !important;
+}
+
+.about-content p {
+  margin-bottom: 13px !important;
+}
+
+.about-image-wrapper {
+  min-height: 360px !important;
+}
+
+.about-image-wrapper img {
+  height: 360px !important;
+}
+
+
+/* Highlight */
+
+.highlight-box {
+  padding: 45px !important;
+}
+
+.highlight-content h2 {
+  margin-bottom: 15px !important;
+}
+
+.highlight-buttons {
+  margin-top: 22px !important;
+}
+
+
+/* CTA */
+
+.cta-content h2 {
+  margin-bottom: 10px !important;
+}
+
+.cta-buttons {
+  margin-top: 22px !important;
+}
+
+
+/* =========================================================
+   MACBOOK / DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .conference-info-section {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .features-section {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+
+  .about-section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .highlight-section {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+
+  .cta-section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .section-header {
+    margin-bottom: 25px !important;
+  }
+
+  .info-card {
+    height: 135px !important;
+    min-height: 135px !important;
+    max-height: 135px !important;
+  }
+
+  .feature-card {
+    min-height: 215px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .conference-info-section {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .features-section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .about-section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .highlight-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .cta-section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .section-header {
+    margin-bottom: 25px !important;
+  }
+
+  .info-card {
+    height: auto !important;
+    min-height: 100px !important;
+    max-height: none !important;
+  }
+
+  .feature-card {
+    min-height: 0 !important;
+    padding: 25px !important;
+  }
+
+  .about-grid {
+    gap: 30px !important;
+  }
+
+  .about-image-wrapper {
+    min-height: 300px !important;
+    height: 300px !important;
+  }
+
+  .about-image-wrapper img {
+    height: 300px !important;
+  }
+
+  .highlight-box {
+    padding: 35px 25px !important;
   }
 }
