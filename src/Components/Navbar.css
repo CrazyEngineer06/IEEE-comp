@@ -16,20 +16,21 @@
 
 .conference-top {
   width: 100%;
-  min-height: 185px;
+
+  min-height: 145px;
 
   display: grid;
 
   grid-template-columns:
-    190px
+    170px
     minmax(500px, 1fr)
-    190px;
+    170px;
 
   align-items: center;
 
   box-sizing: border-box;
 
-  padding: 18px 45px;
+  padding: 10px 40px;
 
   background: #ffffff;
 }
@@ -41,9 +42,7 @@
 
 .conference-logo {
   display: flex;
-
   align-items: center;
-
   justify-content: flex-start;
 }
 
@@ -63,21 +62,22 @@
 
 .conference-title {
   text-align: center;
-
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 
-/* Institute */
+/* =========================================================
+   INSTITUTE NAME
+========================================================= */
 
 .conference-title h1 {
-  margin: 0 0 5px;
+  margin: 0 0 2px;
 
   color: #172033;
 
   font-size: 25px;
 
-  line-height: 1.2;
+  line-height: 1.05;
 
   font-weight: 800;
 
@@ -85,16 +85,18 @@
 }
 
 
-/* Conference */
+/* =========================================================
+   CONFERENCE TITLE
+========================================================= */
 
 .conference-title h2 {
-  margin: 5px 0 14px;
+  margin: 0 0 7px;
 
   color: #172033;
 
   font-size: 36px;
 
-  line-height: 1.15;
+  line-height: 1.05;
 
   font-weight: 800;
 }
@@ -109,7 +111,9 @@
 
   max-width: 90%;
 
-  padding: 10px 28px;
+  margin: 0;
+
+  padding: 8px 25px;
 
   color: #ffffff;
 
@@ -119,23 +123,29 @@
 
   font-size: 17px;
 
-  line-height: 1.3;
+  line-height: 1.2;
 
   font-weight: 700;
 
   box-shadow:
     0 5px 15px rgba(37, 99, 235, 0.18);
+
+  box-sizing: border-box;
 }
 
 
-/* Subtitle */
+/* =========================================================
+   SUBTITLE
+========================================================= */
 
 .conference-title p {
-  margin: 11px 0 0;
+  margin: 6px 0 0;
 
   color: #0c1f39;
 
   font-size: 14px;
+
+  line-height: 1.1;
 
   font-weight: 600;
 }
@@ -172,11 +182,11 @@
 }
 
 .ieee-subtext {
-  margin-top: 5px;
+  margin-top: 4px;
 
   font-size: 10px;
 
-  line-height: 1.2;
+  line-height: 1.1;
 
   font-weight: 700;
 
@@ -188,6 +198,7 @@
 
 /* =========================================================
    BLUE NAVBAR
+   COMPACT HEIGHT
 ========================================================= */
 
 .navBar {
@@ -211,7 +222,8 @@
 
   max-width: 1500px;
 
-  min-height: 62px;
+  /* COMPACT */
+  min-height: 39px;
 
   margin: 0 auto;
 
@@ -244,7 +256,9 @@
 }
 
 
-/* Individual item */
+/* =========================================================
+   NAV ITEM
+========================================================= */
 
 .nav-link li {
   position: relative;
@@ -255,10 +269,13 @@
 }
 
 
-/* Links */
+/* =========================================================
+   NAV LINKS
+========================================================= */
 
 .nav-link li a {
-  min-height: 62px;
+  /* COMPACT */
+  min-height: 39px;
 
   padding: 0 20px;
 
@@ -293,15 +310,14 @@
 ========================================================= */
 
 .nav-link li a:hover {
-  background:
-    rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.13);
 
   color: #ffffff;
 }
 
 
 /* =========================================================
-   ACTIVE-LIKE HOVER EFFECT
+   NAV UNDERLINE
 ========================================================= */
 
 .nav-link li a::after {
@@ -315,7 +331,7 @@
 
   right: 18px;
 
-  height: 4px;
+  height: 3px;
 
   background: #ffffff;
 
@@ -341,7 +357,7 @@
 
   width: 45px;
 
-  height: 45px;
+  height: 39px;
 
   margin: auto 0 auto auto;
 
@@ -377,7 +393,9 @@
 }
 
 
-/* Hamburger animation */
+/* =========================================================
+   HAMBURGER ANIMATION
+========================================================= */
 
 .hamburger.open span:nth-child(1) {
   transform:
@@ -407,12 +425,14 @@
 
 /* =========================================================
    SPOTLIGHT
+   COMPACT HEIGHT
 ========================================================= */
 
 .spotlight-bar {
   width: 100%;
 
-  height: 50px;
+  /* REDUCED FROM 50px */
+  height: 38px;
 
   display: flex;
 
@@ -427,7 +447,9 @@
 }
 
 
-/* Spotlight title */
+/* =========================================================
+   SPOTLIGHT LABEL
+========================================================= */
 
 .spotlight-label {
   height: 100%;
@@ -449,7 +471,7 @@
 
   color: #172033;
 
-  font-size: 14px;
+  font-size: 13px;
 
   font-weight: 800;
 
@@ -457,7 +479,9 @@
 }
 
 
-/* Moving area */
+/* =========================================================
+   SPOTLIGHT WINDOW
+========================================================= */
 
 .spotlight-window {
   flex: 1;
@@ -470,7 +494,9 @@
 }
 
 
-/* Moving text */
+/* =========================================================
+   SPOTLIGHT TEXT
+========================================================= */
 
 .spotlight-text {
   position: absolute;
@@ -489,7 +515,7 @@
 
   color: #001034;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 700;
 
@@ -522,13 +548,14 @@
 @media (max-width: 1200px) {
 
   .conference-top {
-    grid-template-columns:
-      150px
-      minmax(400px, 1fr)
-      150px;
+    min-height: 130px;
 
-    padding:
-      18px 25px;
+    grid-template-columns:
+      140px
+      minmax(400px, 1fr)
+      140px;
+
+    padding: 8px 25px;
   }
 
 
@@ -549,22 +576,55 @@
 
   .conference-title h2 {
     font-size: 29px;
+
+    margin-bottom: 6px;
   }
 
 
   .conference-theme {
     font-size: 14px;
 
-    padding:
-      9px 18px;
+    padding: 7px 18px;
+  }
+
+
+  .conference-title p {
+    font-size: 12px;
+
+    margin-top: 5px;
+  }
+
+
+  /* COMPACT NAVBAR */
+
+  .navbar-container {
+    min-height: 36px;
   }
 
 
   .nav-link li a {
-    padding:
-      0 13px;
+    min-height: 36px;
+
+    padding: 0 13px;
 
     font-size: 11px;
+  }
+
+
+  /* COMPACT SPOTLIGHT */
+
+  .spotlight-bar {
+    height: 36px;
+  }
+
+
+  .spotlight-label {
+    font-size: 12px;
+  }
+
+
+  .spotlight-text {
+    font-size: 13px;
   }
 
 }
@@ -577,13 +637,15 @@
 @media (max-width: 900px) {
 
   .conference-top {
-    grid-template-columns:
-      110px
-      1fr
-      110px;
 
-    padding:
-      15px;
+    min-height: 115px;
+
+    grid-template-columns:
+      100px
+      1fr
+      100px;
+
+    padding: 7px 15px;
   }
 
 
@@ -604,32 +666,64 @@
 
   .conference-title h1 {
     font-size: 16px;
+
+    margin-bottom: 2px;
   }
 
 
   .conference-title h2 {
     font-size: 23px;
+
+    margin-bottom: 5px;
   }
 
 
   .conference-theme {
     font-size: 11px;
 
-    padding:
-      8px 12px;
+    padding: 6px 12px;
   }
 
 
   .conference-title p {
     font-size: 10px;
+
+    margin-top: 4px;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar-container {
+    min-height: 34px;
   }
 
 
   .nav-link li a {
-    padding:
-      0 10px;
+    min-height: 34px;
+
+    padding: 0 10px;
 
     font-size: 10px;
+  }
+
+
+  /* SPOTLIGHT */
+
+  .spotlight-bar {
+    height: 34px;
+  }
+
+
+  .spotlight-label {
+    padding: 0 15px;
+
+    font-size: 11px;
+  }
+
+
+  .spotlight-text {
+    font-size: 12px;
   }
 
 }
@@ -641,19 +735,21 @@
 
 @media (max-width: 700px) {
 
-  /* -----------------------------
+  /* =============================
      TOP HEADER
-  ----------------------------- */
+  ============================= */
 
   .conference-top {
+
+    min-height: auto;
+
     display: flex;
 
     flex-direction: column;
 
-    gap: 10px;
+    gap: 6px;
 
-    padding:
-      18px 12px;
+    padding: 12px 12px;
   }
 
 
@@ -663,7 +759,7 @@
 
 
   .conference-logo img {
-    width: 85px;
+    width: 75px;
   }
 
 
@@ -674,19 +770,22 @@
 
   .conference-title h1 {
     font-size: 14px;
+
+    margin-bottom: 2px;
   }
 
 
   .conference-title h2 {
     font-size: 21px;
+
+    margin-bottom: 5px;
   }
 
 
   .conference-theme {
     max-width: 95%;
 
-    padding:
-      7px 10px;
+    padding: 6px 10px;
 
     font-size: 10px;
   }
@@ -694,6 +793,8 @@
 
   .conference-title p {
     font-size: 9px;
+
+    margin-top: 4px;
   }
 
 
@@ -702,14 +803,15 @@
   }
 
 
-  /* -----------------------------
-     DESKTOP NAVIGATION
-  ----------------------------- */
+  /* =============================
+     NAVBAR
+  ============================= */
 
   .navbar-container {
+
     width: 100%;
 
-    min-height: 55px;
+    min-height: 40px;
 
     justify-content: flex-end;
   }
@@ -720,22 +822,28 @@
   }
 
 
-  /* -----------------------------
+  /* =============================
      HAMBURGER
-  ----------------------------- */
+  ============================= */
 
   .hamburger {
+
     display: flex;
+
+    width: 42px;
+
+    height: 40px;
 
     margin-right: 15px;
   }
 
 
-  /* -----------------------------
+  /* =============================
      MOBILE DRAWER
-  ----------------------------- */
+  ============================= */
 
   .mobile-drawer {
+
     display: block;
 
     position: absolute;
@@ -767,6 +875,7 @@
 
 
   .mobile-nav-link {
+
     list-style: none;
 
     margin: 0;
@@ -776,12 +885,14 @@
 
 
   .mobile-nav-link li {
+
     border-bottom:
       1px solid #e5e7eb;
   }
 
 
   .mobile-nav-link li a {
+
     display: block;
 
     padding:
@@ -802,6 +913,7 @@
 
 
   .mobile-nav-link li a:hover {
+
     color: #2563eb;
 
     background:
@@ -809,16 +921,18 @@
   }
 
 
-  /* -----------------------------
+  /* =============================
      SPOTLIGHT
-  ----------------------------- */
+  ============================= */
 
   .spotlight-bar {
-    height: 44px;
+
+    height: 32px;
   }
 
 
   .spotlight-label {
+
     padding:
       0 13px;
 
@@ -827,7 +941,8 @@
 
 
   .spotlight-text {
-    font-size: 11px;
+
+    font-size: 10px;
   }
 
 }
@@ -839,22 +954,61 @@
 
 @media (max-width: 400px) {
 
+  .conference-top {
+    padding: 10px;
+  }
+
+
   .conference-title h1 {
     font-size: 12px;
   }
+
 
   .conference-title h2 {
     font-size: 18px;
   }
 
+
   .conference-theme {
     font-size: 9px;
   }
+
+
+  .conference-title p {
+    font-size: 8px;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar-container {
+    min-height: 38px;
+  }
+
+
+  .hamburger {
+    height: 38px;
+
+    margin-right: 10px;
+  }
+
+
+  /* SPOTLIGHT */
+
+  .spotlight-bar {
+    height: 30px;
+  }
+
 
   .spotlight-label {
     padding:
       0 9px;
 
+    font-size: 9px;
+  }
+
+
+  .spotlight-text {
     font-size: 9px;
   }
 
