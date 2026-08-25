@@ -155,7 +155,7 @@ function Navbar() {
           SPOTLIGHT BAR
       ====================================================== */}
 
-      <div className="spotlight-bar">
+      {/* <div className="spotlight-bar">
 
         <div className="spotlight-label">
           SPOTLIGHT:
@@ -182,7 +182,7 @@ function Navbar() {
 
         </div>
 
-      </div>
+      </div> */}
 
 
       {/* =====================================================
