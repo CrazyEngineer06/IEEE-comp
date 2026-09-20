@@ -107,9 +107,9 @@
    CARD VARIANTS
 ================================ */
 
-/* Chief Honorary — gold-navy gradient */
+/* Chief Honorary — navbar navy */
 .card--chief {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: var(--navbar-blue, #102e6f);
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: none;
@@ -119,14 +119,14 @@
 
 .card--chief:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 44px rgba(44, 128, 255, 0.656);
+  box-shadow: 0 20px 44px rgba(16, 46, 111, 0.45);
 }
 
-/* Honorary — blue gradient */
+/* Honorary — navbar navy */
 .card--honorary {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: var(--navbar-blue, #102e6f);
   color: #ffffff;
-  box-shadow: 0 10px 28px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 10px 28px rgba(16, 46, 111, 0.25);
   border: none;
 }
 
@@ -134,7 +134,7 @@
 
 .card--honorary:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 40px rgba(16, 46, 111, 0.4);
 }
 
 /* Default — white card with border */
@@ -212,4 +212,79 @@
 
 @media (hover: none) {
   .member-card:hover { transform: none; box-shadow: inherit; }
+}
+/* ===============================
+   CHAIR TABLES
+================================ */
+.committee-table-scroll {
+  max-width: 760px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.committee-table {
+  width: 100%;
+  min-width: 380px;
+  border-collapse: collapse;
+}
+
+.committee-table thead th {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--navbar-blue, #102e6f);
+  white-space: nowrap;
+}
+
+.committee-table tbody td {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.committee-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.committee-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.committee-table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.committee-table .cell-strong {
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.committee-table a {
+  color: #1e40af;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.committee-table a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .committee-table thead th,
+  .committee-table tbody td {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
 }

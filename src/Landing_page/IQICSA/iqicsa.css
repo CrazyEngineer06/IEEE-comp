@@ -1,0 +1,203 @@
+/* =====================================================
+   IQICSA SINGLE PAGE - IN-PAGE NAVIGATION & ANCHORS
+   ===================================================== */
+
+.iq-jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.1rem 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.iq-jump-nav a {
+  padding: 0.55rem 1.1rem;
+  border: 1px solid #dbe3ef;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navbar-blue, #102e6f);
+  text-decoration: none;
+  background: #f8fafc;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.iq-jump-nav a:hover {
+  background: var(--navbar-blue, #102e6f);
+  border-color: var(--navbar-blue, #102e6f);
+  color: #ffffff;
+}
+
+/* Breathing room so a jumped-to heading isn't flush against the viewport */
+.iq-anchor {
+  scroll-margin-top: 20px;
+}
+
+.iq-subheading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+/* Section separators on the combined page */
+.ag-block.iq-anchor + .ag-block.iq-anchor {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  .iq-jump-nav {
+    gap: 0.45rem;
+    padding: 0.9rem 0.6rem;
+  }
+
+  .iq-jump-nav a {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* =====================================================
+   IMPORTANT DATES - refinements on the timeline
+   ===================================================== */
+
+.iq-timeline {
+  max-width: 780px;
+  width: 100%;
+  align-items: stretch;
+  padding: 0 1rem;
+}
+
+.iq-timeline .timeline-list {
+  width: 100%;
+  padding-left: 0;
+}
+
+/* The rail */
+.iq-timeline .timeline-list::before {
+  left: 19px;
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--navbar-blue, #102e6f) 0%,
+    #3b82f6 100%
+  );
+  opacity: 0.35;
+}
+
+.iq-timeline .timeline-item {
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.iq-timeline .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Marker */
+.iq-timeline .timeline-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1.2rem;
+  font-size: 1rem;
+  background: var(--navbar-blue, #102e6f);
+  box-shadow: 0 0 0 5px #f8fafc, 0 6px 14px rgba(16, 46, 111, 0.28);
+  transition: transform 0.28s ease;
+}
+
+.iq-timeline .timeline-item:hover .timeline-icon {
+  transform: scale(1.08);
+}
+
+/* Each entry as a card sitting beside the rail */
+.iq-timeline .timeline-content {
+  flex: 1;
+  max-width: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.95rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  transition: transform 0.28s ease, box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.iq-timeline .timeline-item:hover .timeline-content {
+  transform: translateX(4px);
+  border-color: #c7d5ee;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.1);
+}
+
+.iq-timeline .timeline-label {
+  order: 1;
+  flex: 1 1 260px;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.iq-timeline .timeline-date {
+  order: 2;
+  margin: 0;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: #eef3fb;
+  color: var(--navbar-blue, #102e6f);
+  font-family: inherit;
+  font-size: 0.83rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* The conference itself */
+.iq-timeline .timeline-item.is-final .timeline-content {
+  background: var(--navbar-blue, #102e6f);
+  border-color: var(--navbar-blue, #102e6f);
+}
+
+.iq-timeline .timeline-item.is-final .timeline-label {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.iq-timeline .timeline-item.is-final .timeline-date {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.iq-timeline .timeline-item.is-final .timeline-icon {
+  background: #ffffff;
+  color: var(--navbar-blue, #102e6f);
+}
+
+@media (max-width: 600px) {
+  .iq-timeline .timeline-icon {
+    width: 34px;
+    height: 34px;
+    margin-right: 0.9rem;
+  }
+
+  .iq-timeline .timeline-list::before {
+    left: 16px;
+  }
+
+  .iq-timeline .timeline-content {
+    padding: 0.85rem 1rem;
+  }
+
+  .iq-timeline .timeline-date {
+    order: 0;
+  }
+}

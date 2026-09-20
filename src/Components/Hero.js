@@ -28,14 +28,14 @@ export function Hero() {
           >
 
             <Link
-              to="/registration"
+              to="/author#registration"
               className="btn primary"
             >
               Register Now
             </Link>
 
             <Link
-              to="/callForPapers"
+              to="/iqicsa#call-for-paper"
               className="btn secondary"
             >
               Submit Paper

@@ -629,7 +629,7 @@ export default function Home() {
               <div className="highlight-buttons">
 
                 <Link
-                  to="/callForPapers"
+                  to="/iqicsa#call-for-paper"
                   className="btn-primary"
                 >
                   Submit Your Paper
@@ -637,7 +637,7 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  to="/registration"
+                  to="/author#registration"
                   className="btn-outline"
                 >
                   Register Now
@@ -652,7 +652,7 @@ export default function Home() {
         </div>
 
       </section>
-
+      
 
       {/* =====================================================
           FINAL CTA
@@ -660,7 +660,7 @@ export default function Home() {
 
       <section className="cta-section">
 
-        <motion.div
+        {/* <motion.div
           className="cta-content"
 
           initial={{
@@ -699,14 +699,14 @@ export default function Home() {
           <div className="cta-buttons">
 
             <Link
-              to="/callForPapers"
+              to="/iqicsa#call-for-paper"
               className="btn-light"
             >
               Submit Paper
             </Link>
 
             <Link
-              to="/registration"
+              to="/author#registration"
               className="btn-dark"
             >
               Register Now
@@ -714,7 +714,7 @@ export default function Home() {
 
           </div>
 
-        </motion.div>
+        </motion.div> */}
 
       </section>
 

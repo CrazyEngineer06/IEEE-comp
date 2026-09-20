@@ -1,0 +1,40 @@
+/* =====================================================
+   AUTHOR SINGLE PAGE - SECTION ANCHORS
+   ===================================================== */
+
+.au-anchor {
+  scroll-margin-top: 20px;
+}
+
+.au-section-title {
+  margin: 0;
+  padding: 2.2rem 1rem 0;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--navbar-blue, #102e6f);
+  background: #f8fafc;
+}
+
+.au-section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--navbar-blue, #102e6f);
+  margin: 14px auto 0;
+}
+
+/* The registration block carries its own white background */
+#registration .au-section-title {
+  background: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .au-section-title {
+    font-size: 1.45rem;
+    padding-top: 1.6rem;
+  }
+}

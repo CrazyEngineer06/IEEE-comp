@@ -39,23 +39,25 @@ const registrationRows = [
   },
 ];
 
-export default function Registration() {
+export default function Registration({ hideHero = false }) {
   return (
     <div className="registration-page">
 
       {/* Header */}
-      <section className="registration-hero">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="hero-content"
-        >
-          <h1>Registration</h1>
-          <div className="divider" />
-          <p>Secure your spot at the premier international conference</p>
-        </motion.div>
-      </section>
+      {!hideHero && (
+        <section className="registration-hero">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="hero-content"
+          >
+            <h1>Registration</h1>
+            <div className="divider" />
+            <p>Secure your spot at the premier international conference</p>
+          </motion.div>
+        </section>
+      )}
 
       {/* Notice */}
       

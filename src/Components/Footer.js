@@ -36,13 +36,25 @@ function Footer() {
             </li>
 
             <li>
-              <Link to="/callForPapers">
+              <Link to="/iqicsa#call-for-paper">
                 Call for Papers
               </Link>
             </li>
 
             <li>
-              <Link to="/registration">
+              <Link to="/iqicsa#important-dates">
+                Important Dates
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/author#guidelines">
+                Author's Guidelines
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/author#registration">
                 Registration
               </Link>
             </li>
@@ -52,6 +64,13 @@ function Footer() {
                 Committee
               </Link>
             </li>
+
+            <li>
+              <Link to="/advisoryBoard">
+                Advisory Board
+              </Link>
+            </li>
+
           </ul>
         </div>
 
@@ -69,7 +88,7 @@ function Footer() {
           </p>
 
           <p>
-            Phone: 7249250186 [EXT:2140]
+            Phone:  8956018951 [EXT:2300]
           </p>
         </div>
 
@@ -80,7 +99,7 @@ function Footer() {
           MICROSOFT CMT ACKNOWLEDGMENT
       ===================================================== */}
 
-      <div className="cmt-section">
+      {/* <div className="cmt-section">
 
         <p className="cmt-acknowledgment">
           The Microsoft CMT service was used for managing the peer-reviewing
@@ -89,7 +108,7 @@ function Footer() {
           cloud services as well as for software development and support.
         </p>
 
-      </div>
+      </div> */}
 
 
       <hr />

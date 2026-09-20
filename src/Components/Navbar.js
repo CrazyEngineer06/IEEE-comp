@@ -1,20 +1,72 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { FaChevronDown } from "react-icons/fa";
+
+const navItems = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+
+  // IQICSA dropdown menu
+  {
+    label: "IQICSA",
+    children: [
+      { label: "About CMT", path: "/about-cmt" },
+      { label: "Call for Papers", path: "/iqicsa#call-for-paper" },
+      { label: "Conference Tracks", path: "/iqicsa#conference-tracks" },
+      { label: "Important Dates", path: "/iqicsa#important-dates" },
+    ],
+  },
+
+  { label: "Brochure", path: "/brochure" },
+  { label: "Committee", path: "/committee" },
+  { label: "Advisory Board", path: "/advisoryBoard" },
+
+  // Author dropdown
+  {
+    label: "Author",
+    children: [
+      { label: "Guidelines", path: "/author#guidelines" },
+      { label: "Registration", path: "/author#registration" },
+    ],
+  },
+
+  { label: "Contact Us", path: "/contactUs" },
+];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openMobileMenu, setOpenMobileMenu] = useState(null);
 
-  const navItems = [
-    ["/", "Home"],
-    ["/brochure", "Brochure"],
-    ["/about", "About"],
-    ["/Highlights", "Highlights"],
-    ["/callForPapers", "Papers"],
-    ["/committee", "Committee"],
-    ["/registration", "Registration"],
-    ["/contactUs", "Contact Us"],
-  ];
+  const navRef = useRef(null);
+
+  /* Close desktop dropdown when clicking outside */
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(e.target)
+      ) {
+        setOpenDropdown(null);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      );
+    };
+  }, []);
+
+  const closeAll = () => {
+    setMenuOpen(false);
+    setOpenDropdown(null);
+    setOpenMobileMenu(null);
+  };
 
   return (
     <header className="conference-header">
@@ -33,7 +85,6 @@ function Navbar() {
           />
         </div>
 
-
         {/* CENTER - CONFERENCE INFORMATION */}
         <div className="conference-title">
 
@@ -42,11 +93,13 @@ function Navbar() {
           </h1>
 
           <h2>
-            IEEE International Conference
+            IEEE International Conference On
           </h2>
 
           <div className="conference-theme">
             Quantum Informatics, Communication Systems and Applications
+            <br />
+            (IQICSA 2027) (Hybrid Mode)
           </div>
 
           <p>
@@ -55,28 +108,37 @@ function Navbar() {
 
         </div>
 
+        {/* RIGHT - IEEE + CONFERENCE LOGO */}
+        <div className="conference-logo conference-logo-right">
 
-        {/* RIGHT - IEEE */}
-        <div className="conference-ieee">
+          <img
+            className="ieee-logo-img"
+            src={`${process.env.PUBLIC_URL}/images.jpeg`}
+            alt="IEEE"
+          />
 
-          <div className="ieee-text">
-            IEEE
-          </div>
-
-          <div className="ieee-subtext">
-            International Conference
-          </div>
+          <img
+            className="conference-logo-img"
+            src={`${process.env.PUBLIC_URL}/conferenceLogo.jpeg`}
+            alt="Conference Logo"
+          />
 
         </div>
 
       </div>
 
+      {/* <p className="ag-lead" style={{fontSize : "17px"}}>
+        The Microsoft CMT service was used for managing the peer-reviewing
+        process for this conference. This service was provided for free by
+        Microsoft and they bore all expenses, including costs for Azure
+        cloud services as well as for software development and support.
+      </p> */}
 
       {/* =====================================================
           BLUE NAVIGATION BAR
       ====================================================== */}
 
-      <nav className="navBar">
+      <nav className="navBar" ref={navRef}>
 
         <div className="navbar-container">
 
@@ -84,26 +146,103 @@ function Navbar() {
 
           <ul className="nav-link">
 
-            {navItems.map(([path, label]) => (
+            {navItems.map((item) => (
 
-              <li key={path}>
-                <Link to={path}>
-                  {label}
-                </Link>
-              </li>
+              item.children ? (
+
+                /* =================================================
+                   ITEMS WITH DROPDOWN
+                ================================================== */
+
+                <li
+                  key={item.label}
+                  className={`has-dd ${
+                    openDropdown === item.label
+                      ? "open"
+                      : ""
+                  }`}
+                >
+
+                  <button
+                    type="button"
+                    className="nav-dd-btn"
+                    aria-expanded={
+                      openDropdown === item.label
+                    }
+                    onClick={() =>
+                      setOpenDropdown(
+                        openDropdown === item.label
+                          ? null
+                          : item.label
+                      )
+                    }
+                  >
+
+                    {item.label}
+
+                    <FaChevronDown className="dropdown-caret" />
+
+                  </button>
+
+                  <ul className="nav-dd-panel">
+
+                    {item.children.map((child) => (
+
+                      <li key={child.path}>
+
+                        <Link
+                          to={child.path}
+                          onClick={() =>
+                            setOpenDropdown(null)
+                          }
+                        >
+                          {child.label}
+                        </Link>
+
+                      </li>
+
+                    ))}
+
+                  </ul>
+
+                </li>
+
+              ) : (
+
+                /* =================================================
+                   NORMAL NAVIGATION ITEMS
+                ================================================== */
+
+                <li key={item.path}>
+
+                  <Link
+                    to={item.path}
+                    onClick={() =>
+                      setOpenDropdown(null)
+                    }
+                  >
+                    {item.label}
+                  </Link>
+
+                </li>
+
+              )
 
             ))}
 
           </ul>
 
-
-          {/* HAMBURGER */}
+          {/* =====================================================
+              HAMBURGER
+          ====================================================== */}
 
           <button
             className={`hamburger ${
               menuOpen ? "open" : ""
             }`}
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
@@ -115,7 +254,6 @@ function Navbar() {
           </button>
 
         </div>
-
 
         {/* =====================================================
             MOBILE DRAWER
@@ -129,18 +267,83 @@ function Navbar() {
 
           <ul className="mobile-nav-link">
 
-            {navItems.map(([path, label]) => (
+            {navItems.map((item) => (
 
-              <li key={path}>
+              item.children ? (
 
-                <Link
-                  to={path}
-                  onClick={() => setMenuOpen(false)}
+                /* =================================================
+                   MOBILE DROPDOWN
+                ================================================== */
+
+                <li
+                  key={item.label}
+                  className={`mobile-has-dropdown ${
+                    openMobileMenu === item.label
+                      ? "open"
+                      : ""
+                  }`}
                 >
-                  {label}
-                </Link>
 
-              </li>
+                  <button
+                    type="button"
+                    className="mobile-dropdown-toggle"
+                    aria-expanded={
+                      openMobileMenu === item.label
+                    }
+                    onClick={() =>
+                      setOpenMobileMenu(
+                        openMobileMenu === item.label
+                          ? null
+                          : item.label
+                      )
+                    }
+                  >
+
+                    {item.label}
+
+                    <FaChevronDown className="dropdown-caret" />
+
+                  </button>
+
+                  <ul className="mobile-submenu">
+
+                    {item.children.map((child) => (
+
+                      <li key={child.path}>
+
+                        <Link
+                          to={child.path}
+                          onClick={closeAll}
+                        >
+                          {child.label}
+                        </Link>
+
+                      </li>
+
+                    ))}
+
+                  </ul>
+
+                </li>
+
+              ) : (
+
+                /* =================================================
+                   NORMAL MOBILE NAVIGATION ITEMS
+                ================================================== */
+
+                <li key={item.path}>
+
+                  <Link
+                    to={item.path}
+                    onClick={closeAll}
+                  >
+                    {item.label}
+                  </Link>
+
+                </li>
+
+              )
 
             ))}
 
@@ -150,63 +353,18 @@ function Navbar() {
 
       </nav>
 
-
-      {/* =====================================================
-          SPOTLIGHT BAR
-      ====================================================== */}
-
-      {/* <div className="spotlight-bar">
-
-        <div className="spotlight-label">
-          SPOTLIGHT:
-        </div>
-
-        <div className="spotlight-window">
-
-          <div className="spotlight-text">
-
-            Paper Submission is Open
-            &nbsp;&nbsp; • &nbsp;&nbsp;
-
-            Registration Open
-            &nbsp;&nbsp; • &nbsp;&nbsp;
-
-            Important Conference Updates
-            &nbsp;&nbsp; • &nbsp;&nbsp;
-
-            IEEE International Conference on
-            Quantum Informatics, Communication
-            Systems and Applications
-
-          </div>
-
-        </div>
-
-      </div> */}
-
-
       {/* =====================================================
           MICROSOFT CMT NOTICE
       ====================================================== */}
 
-      <div className="cmt-bar">
-
-        <div className="cmt-window">
-
-          <div className="cmt-text">
-
-            The Microsoft CMT service was used for managing the
-            peer-reviewing process for this conference.
-            This service was provided for free by Microsoft and
-            they bore all expenses, including costs for Azure
-            cloud services as well as for software development
-            and support.
-
-          </div>
-
-        </div>
-
-      </div>
+      {/*
+      <p className="ag-lead">
+        The Microsoft CMT service was used for managing the peer-reviewing
+        process for this conference. This service was provided for free by
+        Microsoft and they bore all expenses, including costs for Azure
+        cloud services as well as for software development and support.
+      </p>
+      */}
 
     </header>
   );

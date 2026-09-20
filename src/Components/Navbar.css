@@ -22,9 +22,9 @@
   display: grid;
 
   grid-template-columns:
-    170px
-    minmax(500px, 1fr)
-    170px;
+    330px
+    minmax(420px, 1fr)
+    330px;
 
   align-items: center;
 
@@ -53,6 +53,23 @@
   display: block;
 
   object-fit: contain;
+}
+
+
+/* RIGHT SIDE - IEEE + CONFERENCE LOGO */
+
+.conference-logo-right {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+}
+
+.conference-logo-right .ieee-logo-img {
+  width: 185px;
+}
+
+.conference-logo-right .conference-logo-img {
+  width: 125px;
 }
 
 
@@ -204,7 +221,7 @@
 .navBar {
   width: 100%;
 
-  background: #102e6f;
+  background: var(--navbar-blue, #102e6f);
 
   box-shadow:
     0 3px 10px rgba(0, 0, 0, 0.12);
@@ -551,15 +568,27 @@
     min-height: 130px;
 
     grid-template-columns:
-      140px
-      minmax(400px, 1fr)
-      140px;
+      265px
+      minmax(340px, 1fr)
+      265px;
 
     padding: 8px 25px;
   }
 
 
   .conference-logo img {
+    width: 100px;
+  }
+
+  .conference-logo-right {
+    gap: 8px;
+  }
+
+  .conference-logo-right .ieee-logo-img {
+    width: 145px;
+  }
+
+  .conference-logo-right .conference-logo-img {
     width: 100px;
   }
 
@@ -641,15 +670,23 @@
     min-height: 115px;
 
     grid-template-columns:
-      100px
+      200px
       1fr
-      100px;
+      200px;
 
     padding: 7px 15px;
   }
 
 
   .conference-logo img {
+    width: 80px;
+  }
+
+  .conference-logo-right .ieee-logo-img {
+    width: 115px;
+  }
+
+  .conference-logo-right .conference-logo-img {
     width: 80px;
   }
 
@@ -759,6 +796,18 @@
 
 
   .conference-logo img {
+    width: 75px;
+  }
+
+  .conference-logo-right {
+    justify-content: center;
+  }
+
+  .conference-logo-right .ieee-logo-img {
+    width: 110px;
+  }
+
+  .conference-logo-right .conference-logo-img {
     width: 75px;
   }
 
@@ -1139,6 +1188,270 @@
     font-size: 8px;
 
     animation-duration: 28s;
+  }
+
+}
+
+/* =========================================================
+   DESKTOP DROPDOWN MENUS
+========================================================= */
+
+.navBar {
+  position: relative;
+  z-index: 50;
+}
+
+.nav-link li.has-dd {
+  position: relative;
+}
+
+.nav-link li .nav-dd-btn {
+  min-height: 39px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.nav-link li .nav-dd-btn:hover,
+.nav-link li.has-dd:hover .nav-dd-btn,
+.nav-link li.has-dd.open .nav-dd-btn {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.dropdown-caret {
+  font-size: 9px;
+
+  transition: transform 0.25s ease;
+}
+
+.nav-link li.has-dd:hover .dropdown-caret,
+.nav-link li.has-dd.open .dropdown-caret {
+  transform: rotate(180deg);
+}
+
+
+/* DROPDOWN PANEL */
+
+.nav-link .nav-dd-panel {
+  display: block;
+
+  position: absolute;
+
+  top: 100%;
+
+  left: 0;
+
+  min-width: 230px;
+
+  margin: 0;
+
+  padding: 6px 0;
+
+  list-style: none;
+
+  background: #ffffff;
+
+  border-radius: 0 0 8px 8px;
+
+  box-shadow:
+    0 12px 28px
+    rgba(0, 0, 0, 0.18);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    visibility 0.22s ease;
+
+  z-index: 60;
+}
+
+.nav-link li.has-dd:hover .nav-dd-panel,
+.nav-link li.has-dd.open .nav-dd-panel {
+  display: block;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.nav-link .nav-dd-panel li {
+  display: block;
+
+  width: 100%;
+}
+
+.nav-link .nav-dd-panel li a {
+  min-height: auto;
+
+  display: block;
+
+  padding: 11px 18px;
+
+  color: #172033;
+
+  font-size: 12.5px;
+
+  font-weight: 700;
+
+  text-transform: none;
+
+  letter-spacing: 0.2px;
+
+  text-align: left;
+
+  border-left: 3px solid transparent;
+}
+
+.nav-link .nav-dd-panel li a::after {
+  display: none;
+}
+
+.nav-link .nav-dd-panel li a:hover {
+  background: rgba(37, 99, 235, 0.07);
+
+  color: #1e40af;
+
+  border-left-color: #2563eb;
+}
+
+
+/* =========================================================
+   MOBILE DROPDOWN MENUS
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .mobile-drawer.active {
+    max-height: 85vh;
+
+    overflow-y: auto;
+  }
+
+  .mobile-nav-link li.mobile-has-dropdown {
+    display: block;
+  }
+
+  .mobile-dropdown-toggle {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 25px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #172033;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-align: left;
+  }
+
+  .mobile-has-dropdown.open .mobile-dropdown-toggle {
+    color: #2563eb;
+  }
+
+  .mobile-has-dropdown.open .dropdown-caret {
+    transform: rotate(180deg);
+  }
+
+  .mobile-submenu {
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    background: #f8fafc;
+
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-has-dropdown.open .mobile-submenu {
+    max-height: 400px;
+  }
+
+  .mobile-submenu li {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .mobile-submenu li:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-submenu li a {
+    display: block;
+
+    padding: 13px 25px 13px 40px;
+
+    color: #475569;
+
+    text-decoration: none;
+
+    font-size: 13.5px;
+
+    font-weight: 600;
+  }
+
+  .mobile-submenu li a:hover {
+    color: #2563eb;
+
+    background: rgba(37, 99, 235, 0.06);
   }
 
 }
