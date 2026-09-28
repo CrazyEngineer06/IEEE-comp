@@ -24,7 +24,7 @@ function About() {
           <div className="about-card">
             <h2>About The Conference</h2>
               <p>
-                IQICSA 2027 is an IEEE international conference focused on quantum computing, secure communication systems and their real-world applications. It brings together researchers, academics and industry professionals to discuss advancements in Quantum Key Distribution (QKD), qubit architectures, post-quantum cryptography and quantum machine learning. Accepted papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements. It serves as a premier platform for collaboration and innovation at the intersection of quantum science and modern communication engineering.
+                IQICSA 2027 is an IEEE international conference focused on quantum computing, secure communication systems and their real-world applications. It brings together researchers, academics and industry professionals to discuss advancements in Quantum Key Distribution (QKD), qubit architectures, post-quantum cryptography and quantum machine learning.All accepted and presented papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements. It serves as a premier platform for collaboration and innovation at the intersection of quantum science and modern communication engineering.
               </p>
           </div>
 

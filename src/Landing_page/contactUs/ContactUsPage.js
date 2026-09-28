@@ -42,8 +42,8 @@ function VenueContact() {
               <FaEnvelope className="icon" />
               <p>
                  
-                ngupta@aitpune.edu.in<br />
-                syadav@aitpune.edu.in
+                iqicsaieee@aitpune.edu.in
+
               </p>
             </div>
           </div>

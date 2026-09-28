@@ -11,7 +11,7 @@ import {
   FaExclamationTriangle,
 } from "react-icons/fa";
 
-const SUBMISSION_LINK = "https://cmt3.research.microsoft.com/ICCUBEA2026";
+const SUBMISSION_LINK = "https://cmt3.research.microsoft.com/IQICSA2027";
 const IEEE_TEMPLATES_LINK =
   "https://www.ieee.org/conferences/publishing/templates.html";
 
@@ -51,7 +51,7 @@ const styleRules = [
   ["File Format", "Only papers prepared in PDF format will be accepted."],
   [
     "Paper Length",
-    "Up to 6 pages, including figures, tables & references. At maximum, two additional pages are permitted with an over-length page charge of Rs. 800/- per page, as per IEEE conference paper guidelines.",
+    "Up to 8 pages, including figures, tables & references. At maximum, two additional pages are permitted with an over-length page charge of Rs. 500/- per page, as per IEEE conference paper guidelines.",
   ],
   ["Paper Formatting", "Double column, single spaced, #10 point Times Roman font."],
   [

@@ -7,7 +7,7 @@ export const committeeStructure = [
   {
     section: "Chief Honorary Chair",
     members: [
-      { name: "Maj Gen Parvinder Singh Sindhu", affiliation: "Chairman, AIT Pune" },
+      { name: "Maj Gen Parvinder Singh Sidhu, VSM", affiliation: "Chairman, AIT Pune" },
     ],
   },
   {

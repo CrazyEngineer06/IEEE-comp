@@ -13,9 +13,9 @@ const fade = {
 
 const cmtSteps = [
   "Create a free Microsoft CMT account, or sign in with an existing one.",
-  "Open the IQICSA 2027 submission page and select \"Create new submission\".",
-  "Enter the title, abstract, keywords and the complete list of co-authors.",
-  "Upload the manuscript as a PDF prepared in the IEEE A4 conference template.",
+  "Open the IQICSA 2027 submission page and select \"Create new submission\" and select appropriate conference track.",
+  "Enter the title, abstract, keywords and the complete list of authors and co-authors.",
+  "Upload the manuscript as a PDF/Docx prepared in the IEEE A4 conference template.",
   "Submit before the deadline; the system assigns a PaperID used for all further correspondence.",
 ];
 

@@ -34,15 +34,15 @@ export const tracks = [
   },
   {
     title: "Track 5",
-    name: "Applications of Quantum Technologies in Industry",
+    name: "Quantum Technologies & Applications",
     items: [
-      "Quantum computing in Finance",
+      "Quantum Applications in Finance",
       "Quantum Applications in Healthcare & Drug Discovery",
       "Quantum Technologies for Materials Science & Chemistry",
       "Quantum Optimization in Logistics & Supply Chain",
       "Quantum Applications in Energy Systems",
       "Quantum Sensing & Metrology",
-      "Quantum Applications in Cybersecurity & Risk Management",
+      "Quantum Sensing, Cybersecurity & Risk Management",
       "Quantum Technologies for Climate Modeling & Sustainability",
       "Hybrid Quantum-Classical Applications in Real-World Systems"
     ],
@@ -50,12 +50,12 @@ export const tracks = [
 ];
 
 export const dates = [
-  { label: "Abstract Submission Date: ", date: "2027-02-10" },
-  { label: "Full Paper Submission Date:", date: "2027-02-10" },
-  { label: "Notification of Acceptance Date", date: "2027-04-30" },
-  { label: "Final Camera Ready Paper Submission Date", date: "2027-05-30" },
-  { label: "Last Date for Registration", date: "2027-07-15" },
-  { label: "Conference Date", date: "2027-09-24 & 2027-09-25" },
+  { label: "Abstract Submission Date: ", date: "10-02-2027" },
+  { label: "Full Paper Submission Date:", date: "10-02-2027" },
+  { label: "Notification of Acceptance Date", date: "30-04-2027" },
+  { label: "Final Camera Ready Paper Submission Date", date: "30-05-2027" },
+  { label: "Last Date for Registration", date: "15-07-2027" },
+  { label: "Conference Date", date: "24-09-2027 & 25-09-2027" },
 ];
 
-export const SUBMISSION_LINK = "https://cmt3.research.microsoft.com/ICCUBEA2026";
+export const SUBMISSION_LINK = "https://cmt3.research.microsoft.com/IQICSA2027";

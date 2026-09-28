@@ -147,7 +147,6 @@ export default function Registration({ hideHero = false }) {
           <p>Complete your registration in just a few simple steps</p>
           <div className="cta-actions">
             <button className="primary-btn">Register Online</button>
-            <button className="secondary-btn">Download Form</button>
           </div>
           <small>Questions? Contact us at hodcomp@aitpune.edu.in</small>
         </motion.div>

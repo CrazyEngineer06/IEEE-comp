@@ -15,9 +15,9 @@ const fade = {
 
 const submissionNotes = [
   "Papers must report original, unpublished work and must not be under review elsewhere.",
-  "Only papers prepared in PDF format, using the IEEE A4 conference template, will be accepted.",
-  "Up to 6 pages including figures, tables and references; a maximum of two extra pages is allowed with over-length page charges.",
-  "All submissions are peer reviewed and screened for plagiarism using iThenticate.",
+  "Only papers prepared in PDF/Docx format, using the IEEE A4 conference template, will be accepted.",
+  "Up to 8 pages including figures, tables & references. At maximum, two additional pages are permitted with an over-length page charge, of Rs. 500/- per page, as per IEEE conference paper guidelines.",
+  "All submissions are peer reviewed and screened for plagiarism using Turnitin/IEEE CrossCheck.",
 ];
 
 function CallForPapers() {
@@ -57,13 +57,14 @@ function CallForPapers() {
               <h3>Paper Submission</h3>
               <p>The paper submission portal will open soon.</p>
             </div>
-            <button
-              type="button"
-              className="ag-btn ag-btn-inert"
-              aria-disabled="true"
+            <a
+              href="https://cmt3.research.microsoft.com/IQICSA2027"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ag-btn"
             >
               Submit Paper
-            </button>
+            </a>
           </div>
         </motion.div>
 
